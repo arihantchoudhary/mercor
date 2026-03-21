@@ -28,7 +28,13 @@ Our contributions:
 
 ## 2. Related Work
 
-**MCQ evaluation inconsistencies.** Molfese et al. (2025) systematically analyze MCQA evaluation strategies and find that different extraction methods (regex, logprobs, LLM-based extractors) produce inconsistent scores for the same model, leading to "inaccurate and misleading model comparisons." They identify a fundamental trade-off between constraining output format (easier extraction) and allowing free-form generation (better reasoning). Our work provides empirical evidence for this trade-off: constraining to a single token eliminates extraction error entirely while preserving the model's ranking ability. Relatedly, Molfese et al. (2025b) propose consistency evaluation with altered answer choices as a more reliable scoring methodology.
+**MCQ evaluation inconsistencies.** Molfese et al. (2025) systematically analyze MCQA evaluation strategies across three extraction methods (regex, logprobs, and LLM-based xFinder), four prompt settings (zero-shot, zero-shot CoT, zero-shot constrained, and few-shot), and eight models (1B–8B parameters) on MMLU-Redux (5,700 questions), OpenBookQA, and ARC-Challenge. Their central finding is that extraction method choice alone can shift reported accuracy by 3–6 pp on the same model: on MMLU-Redux, regex yields 59.7%, logprobs 60.5%, and xFinder 62.3% in the zero-shot setting. They also identify a fundamental trade-off: STEM subjects benefit from unconstrained prompts (+2.5 pp with xFinder in ZS vs. ZS-Constrained), but unconstrained output raises regex miss rates above 40%, and even the best LLM-based extractor (xFinder-Llama, 95.3% Cohen's kappa with human raters) fails to detect inconsistent reasoning in adversarial examples at rates below 2%.
+
+Critically, Molfese et al. frame this as an unresolved trade-off — constrain the format and lose reasoning quality, or allow free generation and lose extraction reliability. **Our work resolves this trade-off.** Forced single-token scoring eliminates extraction error entirely (100% parse rate) without sacrificing the model's ranking ability, because the next-token probability distribution P(A|prompt) already encodes the model's reasoning over the options. We do not need the model to *articulate* its reasoning to *apply* it. This is the key departure: where Molfese et al. conclude that better extractors are needed, we argue that the extraction problem can be sidestepped altogether by reading the model's beliefs directly from its output distribution.
+
+Additionally, Molfese et al. find that few-shot prompting produces stable performance across all extraction strategies (converging to 63–64% on MMLU-Redux), which aligns with our result that few-shot selection stacks cleanly on top of forced single-token scoring (+3.4 pp). Their finding that response length beyond ~1,000 characters provides only +0.6% accuracy further supports our approach: the reasoning tokens are mostly waste from an evaluation standpoint.
+
+Relatedly, Molfese et al. (2025b) propose consistency evaluation with altered answer choices as a more reliable scoring methodology.
 
 **Multiple-choice evaluation.** The lm-evaluation-harness (Gao et al., 2023) scores MCQ tasks using per-token log-likelihood: for each candidate continuation, compute P(continuation | context) and select the highest. This bypasses generation entirely. Our forced single-token approach approximates this through the generation interface when log-likelihoods are unavailable (as with many API-served models).
 
@@ -83,6 +89,16 @@ The model generates free text (e.g., "The answer is B because..."). We extract t
 | + Prompt ensemble | 50.0% | -16.7 pp | Different phrasings elicit different verbosity levels |
 
 Every optimization increased output verbosity, which increased extraction failures. **The prompt engineering was working — the extraction was breaking.**
+
+**Why self-consistency makes accuracy *worse*, not just no-better.** The drop from 66.7% (baseline) to 30.0% (self-consistency) is counterintuitive — majority voting should, in theory, only help. The failure mechanism has three parts:
+
+1. **Self-consistency inherently uses CoT + elevated temperature.** Wang et al.'s method samples diverse *reasoning paths*, which requires temperature > 0 and chain-of-thought prompting. Both increase output length and verbosity, which is exactly what breaks regex extraction. Each of the k=5 samples suffers from the same class of extraction failure as standalone CoT (20.0%).
+
+2. **Extraction errors are correlated, not independent.** Majority voting's theoretical guarantee assumes each sample independently produces a correct answer with probability p, so voting pushes aggregate accuracy above p. But extraction errors are *systematic*: when the model discusses all four options in order (A, then B, then C, then D), the regex consistently latches onto the same wrong letter across samples — typically whichever letter appears last in the reasoning or first in a phrase like "Option A is unlikely." Because the same prompt structure drives all k samples toward similar verbose patterns, the extraction errors are positively correlated.
+
+3. **Voting amplifies correlated errors.** If 3 out of 5 samples all mis-extract to the same wrong letter (say "A"), the majority vote locks in "A" with high confidence. A single greedy sample at temperature=0 at least has a ~85% chance of producing concise-enough output for successful extraction; with self-consistency, the vote is dominated by the correlated mis-extractions. The result (30.0%) is above CoT alone (20.0%) because voting occasionally recovers when 2–3 samples happen to extract correctly, but far below baseline because the per-sample extraction success rate (~30–40%) is too low for majority voting to reliably converge on the right answer.
+
+In short: self-consistency assumes a reliable answer-extraction channel. When that channel is noisy and biased, voting doesn't average out the noise — it amplifies the bias.
 
 ### 3.4 Forced Single-Token Scoring
 
