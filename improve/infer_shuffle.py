@@ -396,12 +396,12 @@ def save_results(
         payload["mcnemar_vs_baseline"] = mcnemar
 
     with open(path, "w") as f:
-        json.dump(payload, f, indent=2)
+        json.dump(payload, f, indent=2, default=str)
 
     # Also save a "latest" copy for convenience
     latest_path = RESULTS_DIR / f"{tag}_latest.json"
     with open(latest_path, "w") as f:
-        json.dump(payload, f, indent=2)
+        json.dump(payload, f, indent=2, default=str)
 
     return path
 
