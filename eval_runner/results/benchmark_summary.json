@@ -1,0 +1,32 @@
+{
+  "model": "qwen2.5:7b",
+  "timestamp": "2026-03-21T04:10:27.334784+00:00",
+  "benchmarks": {
+    "mmlu": {
+      "accuracy": 0.65333,
+      "correct": 196,
+      "total": 300,
+      "ci_95": [
+        0.59785,
+        0.70494
+      ],
+      "subjects": {
+        "abstract_algebra": 0.52,
+        "anatomy": 0.6,
+        "astronomy": 0.66,
+        "business_ethics": 0.66,
+        "clinical_knowledge": 0.7,
+        "college_biology": 0.78
+      }
+    },
+    "prog_lang_id": {
+      "accuracy": 1.0,
+      "method": "lm-eval generate_until + exact_match"
+    },
+    "hellaswag_lmeval": {
+      "acc": 0.26,
+      "acc_norm": 0.38,
+      "note": "loglikelihood approximation via token-by-token prefix scoring (Ollama does not expose raw logprobs for prompt tokens)"
+    }
+  }
+}

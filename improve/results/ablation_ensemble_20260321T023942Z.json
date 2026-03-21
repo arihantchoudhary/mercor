@@ -1,0 +1,273 @@
+{
+  "tag": "ablation_ensemble",
+  "timestamp": "20260321T023942Z",
+  "config": {
+    "model": "qwen2.5:7b",
+    "base_url": "http://localhost:11434",
+    "seed": 42,
+    "n_examples": 20,
+    "template_name": "direct",
+    "n_shot": 3,
+    "cot_style": "step_by_step",
+    "sc_k": 5,
+    "sc_temp": 0.7,
+    "strategy": "ensemble"
+  },
+  "metrics": {
+    "accuracy": 0.5,
+    "correct": 10,
+    "total": 20,
+    "ci_95_wilson": [
+      0.29929,
+      0.70071
+    ],
+    "ci_95_bootstrap": [
+      0.3,
+      0.7
+    ],
+    "avg_latency_s": 21.429,
+    "total_time_s": 428.6
+  },
+  "per_example": [
+    {
+      "idx": 0,
+      "ind": 24,
+      "ctx_preview": "A man is sitting on a roof. he",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine which ending correctly completes the text \"A man is sitting on a roof | **D. starts pulling up roofing on a roof.** | D. The man starts pulling up roofing on the roof, as he is already | ",
+      "latency_s": 21.397,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 1,
+      "ind": 92,
+      "ctx_preview": "A lady walks to a barbell. She bends down and grabs the pole. the lady",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "raw_response": "D | **D. stands and lifts the weight over her head**. | B. The lady pulls the barbell forward, as she has grabbed the pole | D. stands and lifts the weight over her head. | D. stands and lifts the wei",
+      "latency_s": 18.844,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 2,
+      "ind": 106,
+      "ctx_preview": "Two women in a child are shown in a canoe while a man pulls the canoe while stan",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "C | **C. sit in a canoe while the man paddles.** | C. The child and the different man are sitting in a canoe while the man | B | C. sit in a canoe while the man paddles.",
+      "latency_s": 14.758,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 3,
+      "ind": 114,
+      "ctx_preview": "A boy is running down a track. the boy",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "C | C. lifts his body above the height of a pole. | C. The boy lifts his body above the height of a pole, as this | C | C. lifts his body above the height of a pole.",
+      "latency_s": 16.301,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 4,
+      "ind": 116,
+      "ctx_preview": "The boy lifts his body above the height of a pole. The boy lands on his back on ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "raw_response": "B | **B. gets up from the mat.** | B. The boy would get up from the mat after landing on it, as | B. gets up from the mat. | B. gets up from the mat.",
+      "latency_s": 43.895,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 5,
+      "ind": 117,
+      "ctx_preview": "The boy lands on his back on to a red mat. The boy gets up from the mat. the boy",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "raw_response": "B | **B. celebrates by clapping and flexing both arms.** | B. Celebrates by clapping and flexing both arms. | B | B. celebrates by clapping and flexing both arms.",
+      "latency_s": 16.76,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 6,
+      "ind": 149,
+      "ctx_preview": "A man is standing in front of a camera. He starts playing a harmonica for the ca",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "B",
+      "correct": false,
+      "raw_response": "B | **C. rocks back and forth to the music as he goes.** | B. | B | C. rocks back and forth to the music as he goes.",
+      "latency_s": 15.896,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 7,
+      "ind": 170,
+      "ctx_preview": "A cartoon animation video is shown with people wandering around and rockets bein",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "D",
+      "correct": false,
+      "raw_response": "A | **D**. look in the cameraman's eye and smile. | D. The two men look in the cameraman's eye and smile, as | To determine which ending makes the most sense for the given cartoon animation video, let",
+      "latency_s": 18.299,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 8,
+      "ind": 180,
+      "ctx_preview": "A man is holding a pocket knife while sitting on some rocks in the wilderness. t",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "A | **B**. | A | A | B. takes a small stone from the flowing river and smashes it on another",
+      "latency_s": 16.375,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 9,
+      "ind": 182,
+      "ctx_preview": "Then he takes a small stone from the flowing river and smashes it on another sto",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "raw_response": "B | **B. grind it hard to make the pieces smaller.** | B. He grinds it hard to make the pieces smaller. | B | B. grind it hard to make the pieces smaller.",
+      "latency_s": 11.267,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 10,
+      "ind": 185,
+      "ctx_preview": "Then he takes a piece of bark and rubs the powered stone pieces onto it. The sto",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "B",
+      "correct": false,
+      "raw_response": "B | **B. then uses a strip of sealing tape to seal the board and then | D. | B | D. then takes the knife and sharpens it against the wood piece.",
+      "latency_s": 11.106,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 11,
+      "ind": 186,
+      "ctx_preview": "The stone particles stick to the wet piece of wood. He then takes the knife and ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "A | **B. scrapes the wood with a broom in the cutting tool used | A. He would cut off the excess wood after sharpening the knife, as | A | A. then cuts off the excess hair of the wood.",
+      "latency_s": 14.316,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 12,
+      "ind": 187,
+      "ctx_preview": "He then takes the knife and sharpens it against the wood piece. He then notices ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "raw_response": "C | **C. then escapes and jumps away.** | C. The frog, being a living creature, would probably react by trying to | C | C. then escapes and jumps away.",
+      "latency_s": 21.36,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 13,
+      "ind": 188,
+      "ctx_preview": "He then notices a little black and green poisonous frog sitting next to him. The",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "raw_response": "C | **C. explains how the frog secretes a poisonous fluid that can be extremely | C. He would probably explain to others about the dangerous nature of the frog, | C | C. explains how the frog secretes",
+      "latency_s": 32.215,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 14,
+      "ind": 192,
+      "ctx_preview": "A person is playing bagpipes out in a park. A man and two boys watching from a f",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "raw_response": "A | **A. shoots areas all around the park while the bagpipes play.** | A. shoots areas all around the park while the bagpipes play. | A. The camera shoots areas all around the park while the bagpipes ",
+      "latency_s": 22.283,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 15,
+      "ind": 200,
+      "ctx_preview": "Two people are seen passing a ball back and fourth in a pool and leads into one ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "raw_response": "D | **D**. demonstrates how to properly throw the ball with his hands while still | D. The man demonstrates how to properly throw the ball with his hands while still | To determine which ending makes ",
+      "latency_s": 29.882,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 16,
+      "ind": 225,
+      "ctx_preview": "A woman is sitting at a table in a fast food restaurant while eating. She contin",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "B",
+      "correct": false,
+      "raw_response": "To determine which ending correctly completes the text, let's analyze each option in relation | **B. pauses in the process of eating to enjoy her food.** | B. She pauses in the process of eating to en",
+      "latency_s": 26.365,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 17,
+      "ind": 245,
+      "ctx_preview": "A group of cheerleaders run onto a stage before a cheering audience. they",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "raw_response": "A | A. get into formation, then begin dancing and flipping as male cheerleaders join | A. get into formation, then begin dancing and flipping as male cheerleaders join | A | A. get into formation, the",
+      "latency_s": 20.789,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 18,
+      "ind": 246,
+      "ctx_preview": "A group of cheerleaders run onto a stage before a cheering audience. They get in",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "raw_response": "B | **B. continue dancing and flipping, doing hand springs.** | B. The cheerleaders will continue dancing and flipping, performing more complex moves such | B | B. continue dancing and flipping, doing",
+      "latency_s": 22.881,
+      "strategy": "ensemble"
+    },
+    {
+      "idx": 19,
+      "ind": 247,
+      "ctx_preview": "They get into formation, then begin dancing and flipping as male cheerleaders jo",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "A | B. are finished, they jump up and down happily and walk off the stage | A. When they are done, they shake hands and walk away, but cheers | A | B. are finished, they jump up and down happily and w",
+      "latency_s": 33.589,
+      "strategy": "ensemble"
+    }
+  ]
+}

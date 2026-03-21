@@ -1,0 +1,268 @@
+{
+  "method": "improved",
+  "model": "qwen2.5:7b",
+  "techniques": [
+    "expert_system_prompt",
+    "few_shot_examples",
+    "chain_of_thought",
+    "self_consistency_majority_vote"
+  ],
+  "num_samples": 5,
+  "total": 18,
+  "correct": 17,
+  "accuracy": 0.9444444444444444,
+  "results": [
+    {
+      "index": 0,
+      "expected": "Rust",
+      "predicted": "Rust",
+      "samples": [
+        "Rust",
+        "Rust",
+        "Rust",
+        "Rust",
+        "Rust"
+      ],
+      "correct": true,
+      "elapsed_s": 20.64
+    },
+    {
+      "index": 1,
+      "expected": "Python",
+      "predicted": "Python",
+      "samples": [
+        "Python",
+        "Python",
+        "Python",
+        "Python",
+        "Python"
+      ],
+      "correct": true,
+      "elapsed_s": 32.74
+    },
+    {
+      "index": 2,
+      "expected": "Java",
+      "predicted": "Java",
+      "samples": [
+        "Java",
+        "Java",
+        "Java",
+        "Java",
+        "Java"
+      ],
+      "correct": true,
+      "elapsed_s": 21.79
+    },
+    {
+      "index": 3,
+      "expected": "Go",
+      "predicted": "Go",
+      "samples": [
+        "Go",
+        "Go",
+        "Go",
+        "Go",
+        "Go"
+      ],
+      "correct": true,
+      "elapsed_s": 29.56
+    },
+    {
+      "index": 4,
+      "expected": "JavaScript",
+      "predicted": "JavaScript",
+      "samples": [
+        "JavaScript",
+        "JavaScript",
+        "JavaScript",
+        "JavaScript",
+        "JavaScript"
+      ],
+      "correct": true,
+      "elapsed_s": 26.77
+    },
+    {
+      "index": 5,
+      "expected": "C",
+      "predicted": "C",
+      "samples": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "correct": true,
+      "elapsed_s": 20.92
+    },
+    {
+      "index": 6,
+      "expected": "C++",
+      "predicted": "C++",
+      "samples": [
+        "C++",
+        "C++",
+        "C++",
+        "C++",
+        "C++"
+      ],
+      "correct": true,
+      "elapsed_s": 22.74
+    },
+    {
+      "index": 7,
+      "expected": "TypeScript",
+      "predicted": "TypeScript",
+      "samples": [
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript",
+        "TypeScript"
+      ],
+      "correct": true,
+      "elapsed_s": 33.87
+    },
+    {
+      "index": 8,
+      "expected": "Ruby",
+      "predicted": "Ruby",
+      "samples": [
+        "Ruby",
+        "Ruby",
+        "Ruby",
+        "Ruby",
+        "Ruby"
+      ],
+      "correct": true,
+      "elapsed_s": 57.92
+    },
+    {
+      "index": 9,
+      "expected": "Swift",
+      "predicted": "Swift",
+      "samples": [
+        "Swift",
+        "Swift",
+        "Swift",
+        "Swift",
+        "Swift"
+      ],
+      "correct": true,
+      "elapsed_s": 70.88
+    },
+    {
+      "index": 10,
+      "expected": "Kotlin",
+      "predicted": "Kotlin",
+      "samples": [
+        "Kotlin",
+        "Kotlin",
+        "Kotlin",
+        "Kotlin",
+        "Kotlin"
+      ],
+      "correct": true,
+      "elapsed_s": 72.58
+    },
+    {
+      "index": 11,
+      "expected": "PHP",
+      "predicted": "PHP",
+      "samples": [
+        "PHP",
+        "PHP",
+        "PHP",
+        "PHP",
+        "PHP"
+      ],
+      "correct": true,
+      "elapsed_s": 78.09
+    },
+    {
+      "index": 12,
+      "expected": "SQL",
+      "predicted": "SQL",
+      "samples": [
+        "SQL",
+        "SQL",
+        "SQL",
+        "SQL",
+        "SQL"
+      ],
+      "correct": true,
+      "elapsed_s": 69.64
+    },
+    {
+      "index": 13,
+      "expected": "Elixir",
+      "predicted": "Elixir",
+      "samples": [
+        "Elixir",
+        "Elixir",
+        "Elixir",
+        "Elixir",
+        "Elixir"
+      ],
+      "correct": true,
+      "elapsed_s": 83.04
+    },
+    {
+      "index": 14,
+      "expected": "Scala",
+      "predicted": "Scala",
+      "samples": [
+        "Scala",
+        "Scala",
+        "Scala",
+        "Scala",
+        "Scala"
+      ],
+      "correct": true,
+      "elapsed_s": 12.11
+    },
+    {
+      "index": 15,
+      "expected": "Haskell",
+      "predicted": "Haskell",
+      "samples": [
+        "Haskell",
+        "Haskell",
+        "Haskell",
+        "Haskell",
+        "Haskell"
+      ],
+      "correct": true,
+      "elapsed_s": 12.04
+    },
+    {
+      "index": 16,
+      "expected": "Bash",
+      "predicted": "Bash",
+      "samples": [
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash",
+        "Bash"
+      ],
+      "correct": true,
+      "elapsed_s": 17.66
+    },
+    {
+      "index": 17,
+      "expected": "C#",
+      "predicted": "C",
+      "samples": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "correct": false,
+      "elapsed_s": 19.22
+    }
+  ]
+}

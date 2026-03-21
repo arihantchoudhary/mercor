@@ -1,0 +1,273 @@
+{
+  "tag": "ablation_selfcon",
+  "timestamp": "20260321T023233Z",
+  "config": {
+    "model": "qwen2.5:7b",
+    "base_url": "http://localhost:11434",
+    "seed": 42,
+    "n_examples": 20,
+    "template_name": "direct",
+    "n_shot": 3,
+    "cot_style": "step_by_step",
+    "sc_k": 5,
+    "sc_temp": 0.7,
+    "strategy": "selfcon"
+  },
+  "metrics": {
+    "accuracy": 0.3,
+    "correct": 6,
+    "total": 20,
+    "ci_95_wilson": [
+      0.14548,
+      0.51898
+    ],
+    "ci_95_bootstrap": [
+      0.1,
+      0.5
+    ],
+    "avg_latency_s": 25.393,
+    "total_time_s": 507.9
+  },
+  "per_example": [
+    {
+      "idx": 0,
+      "ind": 24,
+      "ctx_preview": "A man is sitting on a roof. he",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "B\n\nExplanation for why the other answers are incorrect:\n\n- A | To determine which ending correctly completes the text \"A ma | To determine which ending correctly completes the text \"A ma | To determin",
+      "latency_s": 23.832,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 1,
+      "ind": 92,
+      "ctx_preview": "A lady walks to a barbell. She bends down and grabs the pole. the lady",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "D\nYou are correct. The most logical ending that completes th | D\n\nThe correct ending that completes the text above is optio | D\n\nThe lady walks to a barbell and bends down to grab the po | D\nYou're co",
+      "latency_s": 25.152,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 2,
+      "ind": 106,
+      "ctx_preview": "Two women in a child are shown in a canoe while a man pulls the canoe while stan",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "A\n\nThe correct ending that completes the text above is:\n\nA.  | C\n\nThe correct ending that completes the text above is optio | C\n\nThe correct ending that completes the text above is:\n\nC.  | C\n\nThe corr",
+      "latency_s": 29.343,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 3,
+      "ind": 114,
+      "ctx_preview": "A boy is running down a track. the boy",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "raw_response": "To determine the correct ending for the given context, let's | C\n\nThe correct answer is C: \"lifts his body above the height | C\n\nThe correct answer is C: \"lifts his body above the height | C\nYou are c",
+      "latency_s": 23.606,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 4,
+      "ind": 116,
+      "ctx_preview": "The boy lifts his body above the height of a pole. The boy lands on his back on ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "B\nYou are correct. The appropriate ending to complete the te | B\nYou are correct. The appropriate ending for the given text | B\nYou are correct. The appropriate ending that completes the | B\nYou are c",
+      "latency_s": 26.213,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 5,
+      "ind": 117,
+      "ctx_preview": "The boy lands on his back on to a red mat. The boy gets up from the mat. the boy",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending to complete the given contex | A\nYou are correct. The most logical and appropriate ending t | B\nYou are correct. The sentence that best completes the give | A\nYou are c",
+      "latency_s": 49.35,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 6,
+      "ind": 149,
+      "ctx_preview": "A man is standing in front of a camera. He starts playing a harmonica for the ca",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "B",
+      "correct": false,
+      "raw_response": "To determine which ending correctly completes the text, let' | B\n\nThe correct ending that completes the text above is B: \"s | B\n\nThe correct ending that logically completes the text is o | B\n\nThe corr",
+      "latency_s": 22.215,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 7,
+      "ind": 170,
+      "ctx_preview": "A cartoon animation video is shown with people wandering around and rockets bein",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "raw_response": "A\n\nThe context provided describes an animation video with pe | A\n\nThe correct ending that completes the text above is:\n\n**A | A\n\nThe correct ending that completes the text above is optio | A\n\nThe corr",
+      "latency_s": 24.292,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 8,
+      "ind": 180,
+      "ctx_preview": "A man is holding a pocket knife while sitting on some rocks in the wilderness. t",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "B\n\nThe correct ending that completes the text above is optio | A\n\nExplanation of answer A: In this option, the man takes mu | A\nThe correct ending that logically completes the text is:\n\n | A\n\nExplanat",
+      "latency_s": 23.279,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 9,
+      "ind": 182,
+      "ctx_preview": "Then he takes a small stone from the flowing river and smashes it on another sto",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "B\n\nThe correct ending that completes the text logically is:\n | B\n\nExplanation for why other answers are wrong:\n\nSure! Let's | B\nYou are correct. The appropriate ending for the given cont | B\n\nExplanat",
+      "latency_s": 21.245,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 10,
+      "ind": 185,
+      "ctx_preview": "Then he takes a piece of bark and rubs the powered stone pieces onto it. The sto",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "B\n\nThe context describes someone preparing a piece of bark b | B\nThe correct ending that completes the text above is:\n\nB. t | B\nThe correct ending that fits with the context provided is: | B\n\nThe sent",
+      "latency_s": 17.53,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 11,
+      "ind": 186,
+      "ctx_preview": "The stone particles stick to the wet piece of wood. He then takes the knife and ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "A\nThe context describes someone using a piece of wood and a  | A\n\nThe correct ending that completes the text logically is:\n | A\n\nExplanation: The context describes a process of using a k | A\n\nThe corr",
+      "latency_s": 22.766,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 12,
+      "ind": 187,
+      "ctx_preview": "He then takes the knife and sharpens it against the wood piece. He then notices ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's | C\n\nThe correct ending that completes the text above logicall | C\nYou are correct. The most fitting ending for the given con | C\n\nThe frog",
+      "latency_s": 38.076,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 13,
+      "ind": 188,
+      "ctx_preview": "He then notices a little black and green poisonous frog sitting next to him. The",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "C\n\nExplanation for why other answers are wrong:\n\n- Answer A  | C\nYou are correct. The appropriate ending to complete the te | C\nYou are correct. The appropriate ending to complete the te | C\n\nExplanat",
+      "latency_s": 21.614,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 14,
+      "ind": 192,
+      "ctx_preview": "A person is playing bagpipes out in a park. A man and two boys watching from a f",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "raw_response": "A\n\nThe correct ending to complete the text is:\n\nA. shoots ar | A\n\nThe correct ending to complete the text would be option A | A\n\nThe correct ending to complete the text should be option  | A\n\nThe corr",
+      "latency_s": 22.801,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 15,
+      "ind": 200,
+      "ctx_preview": "Two people are seen passing a ball back and fourth in a pool and leads into one ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "raw_response": "D\n\nThe correct ending that completes the text above is optio | D\n\nThe correct ending that logically completes the text is o | D\nThe correct ending that logically follows from the given c | D\n\nThe cont",
+      "latency_s": 21.391,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 16,
+      "ind": 225,
+      "ctx_preview": "A woman is sitting at a table in a fast food restaurant while eating. She contin",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "C\n\nThe woman likely wants to leave after finishing her meal  | To determine which ending correctly completes the given text | To determine which ending correctly completes the text, let' | To determin",
+      "latency_s": 20.753,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 17,
+      "ind": 245,
+      "ctx_preview": "A group of cheerleaders run onto a stage before a cheering audience. they",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "raw_response": "A\n\nThe sentence \"get into formation, then begin dancing and  | A\n\nExplanation for why other answers are wrong:\n\nThe correct | A\n\nExplanation for why another answer is wrong:\nThe correct  | A\n\nThe corr",
+      "latency_s": 22.832,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 18,
+      "ind": 246,
+      "ctx_preview": "A group of cheerleaders run onto a stage before a cheering audience. They get in",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "raw_response": "B\n\nThe correct ending that completes the text above is:\n\nB.  | B\n\nThe correct ending that completes the text above is:\n\nB.  | B\n\nThe correct ending that completes the text above is:\n\nB.  | B\n\nThe corr",
+      "latency_s": 27.688,
+      "strategy": "selfcon"
+    },
+    {
+      "idx": 19,
+      "ind": 247,
+      "ctx_preview": "They get into formation, then begin dancing and flipping as male cheerleaders jo",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "B\n\nThe correct ending that completes the text above is:\n\nB.  | A\nThe sentence that correctly completes the text above is op | A\nThe correct ending that logically completes the text above | A\n\nThe corr",
+      "latency_s": 23.882,
+      "strategy": "selfcon"
+    }
+  ]
+}

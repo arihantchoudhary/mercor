@@ -1,0 +1,49 @@
+# lm-evaluation-harness task configuration
+# Task: Programming Language Identification
+#
+# Given a code snippet the model must identify the programming language.
+# This is a generate_until task -- the model produces free-form text and
+# we do an exact-match comparison against the gold label.
+
+task: prog_lang_id
+dataset_path: json
+dataset_name: null
+# Point to the local benchmark JSON (relative to where lm_eval is invoked)
+dataset_kwargs:
+  data_files:
+    test: eval_runner/custom_benchmark.json
+  field: examples
+training_split: null
+validation_split: null
+test_split: test
+
+# ----- Prompt formatting -----
+doc_to_text: |
+  Identify the programming language of the following code snippet. Reply with only the language name, nothing else.
+
+  Code:
+  ```
+  {{snippet}}
+  ```
+
+  Language:
+doc_to_target: "{{language}}"
+
+# ----- Generation settings -----
+output_type: generate_until
+generation_kwargs:
+  until:
+    - "\n"
+  max_gen_toks: 20
+  temperature: 0.0
+
+# ----- Metric -----
+metric_list:
+  - metric: exact_match
+    aggregation: mean
+    higher_is_better: true
+    ignore_case: true
+    ignore_punctuation: true
+
+# ----- Misc -----
+num_fewshot: 0

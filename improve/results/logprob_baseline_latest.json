@@ -1,0 +1,3431 @@
+{
+  "tag": "logprob_baseline",
+  "timestamp": "20260321T032617Z",
+  "config": {
+    "model": "qwen2.5:7b",
+    "base_url": "http://localhost:11434",
+    "n_examples": 200,
+    "n_shot": 3,
+    "scoring": "logprob",
+    "top_logprobs": 10,
+    "temperature": 0,
+    "strategy": "logprob_baseline"
+  },
+  "metrics": {
+    "accuracy": 0.72,
+    "correct": 144,
+    "total": 200,
+    "ci_95_wilson": [
+      0.65408,
+      0.77763
+    ],
+    "ci_95_bootstrap": [
+      0.66,
+      0.78
+    ],
+    "avg_latency_s": 0.494,
+    "total_time_s": 98.7
+  },
+  "per_example": [
+    {
+      "idx": 0,
+      "ind": 24,
+      "ctx_preview": "A man is sitting on a roof. he",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -15.9971,
+        "B": -10.7527,
+        "C": -100.0,
+        "D": -8.4225
+      },
+      "latency_s": 0.522,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 1,
+      "ind": 92,
+      "ctx_preview": "A lady walks to a barbell. She bends down and grabs the pole. the lady",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -15.9314,
+        "B": -15.7923,
+        "C": -100.0,
+        "D": -5.5935
+      },
+      "latency_s": 0.427,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 2,
+      "ind": 106,
+      "ctx_preview": "Two women in a child are shown in a canoe while a man pulls the canoe while stan",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -17.5209,
+        "B": -100.0,
+        "C": -12.5643,
+        "D": -18.9053
+      },
+      "latency_s": 0.523,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 3,
+      "ind": 114,
+      "ctx_preview": "A boy is running down a track. the boy",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -17.2816,
+        "B": -100.0,
+        "C": -7.4943,
+        "D": -14.341
+      },
+      "latency_s": 0.307,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 4,
+      "ind": 116,
+      "ctx_preview": "The boy lifts his body above the height of a pole. The boy lands on his back on ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -13.8682,
+        "B": -7.9586,
+        "C": -19.6495,
+        "D": -100.0
+      },
+      "latency_s": 0.417,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 5,
+      "ind": 117,
+      "ctx_preview": "The boy lands on his back on to a red mat. The boy gets up from the mat. the boy",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -12.7069,
+        "B": -7.7966,
+        "C": -100.0,
+        "D": -16.4824
+      },
+      "latency_s": 0.444,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 6,
+      "ind": 149,
+      "ctx_preview": "A man is standing in front of a camera. He starts playing a harmonica for the ca",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -16.385,
+        "B": -15.6246,
+        "C": -14.7682,
+        "D": -18.059
+      },
+      "latency_s": 0.418,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 7,
+      "ind": 170,
+      "ctx_preview": "A cartoon animation video is shown with people wandering around and rockets bein",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -12.4958,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -10.3494
+      },
+      "latency_s": 0.426,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 8,
+      "ind": 180,
+      "ctx_preview": "A man is holding a pocket knife while sitting on some rocks in the wilderness. t",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -14.2095,
+        "B": -12.0886,
+        "C": -100.0,
+        "D": -15.3958
+      },
+      "latency_s": 0.514,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 9,
+      "ind": 182,
+      "ctx_preview": "Then he takes a small stone from the flowing river and smashes it on another sto",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -17.7343,
+        "B": -7.9646,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.523,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 10,
+      "ind": 185,
+      "ctx_preview": "Then he takes a piece of bark and rubs the powered stone pieces onto it. The sto",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -15.6091,
+        "B": -6.5566,
+        "C": -100.0,
+        "D": -10.6469
+      },
+      "latency_s": 0.516,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 11,
+      "ind": 186,
+      "ctx_preview": "The stone particles stick to the wet piece of wood. He then takes the knife and ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "logprobs": {
+        "A": -9.0064,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -12.0195
+      },
+      "latency_s": 0.514,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 12,
+      "ind": 187,
+      "ctx_preview": "He then takes the knife and sharpens it against the wood piece. He then notices ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -16.4914,
+        "B": -100.0,
+        "C": -6.3955,
+        "D": -15.88
+      },
+      "latency_s": 0.519,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 13,
+      "ind": 188,
+      "ctx_preview": "He then notices a little black and green poisonous frog sitting next to him. The",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -12.7441,
+        "C": -11.5293,
+        "D": -16.829
+      },
+      "latency_s": 0.515,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 14,
+      "ind": 192,
+      "ctx_preview": "A person is playing bagpipes out in a park. A man and two boys watching from a f",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -8.2032,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.418,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 15,
+      "ind": 200,
+      "ctx_preview": "Two people are seen passing a ball back and fourth in a pool and leads into one ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -18.5558,
+        "B": -100.0,
+        "C": -15.9306,
+        "D": -7.1889
+      },
+      "latency_s": 0.629,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 16,
+      "ind": 225,
+      "ctx_preview": "A woman is sitting at a table in a fast food restaurant while eating. She contin",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -100.0,
+        "B": -5.9608,
+        "C": -15.6476,
+        "D": -17.8299
+      },
+      "latency_s": 0.519,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 17,
+      "ind": 245,
+      "ctx_preview": "A group of cheerleaders run onto a stage before a cheering audience. they",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -7.5071,
+        "B": -18.1643,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.519,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 18,
+      "ind": 246,
+      "ctx_preview": "A group of cheerleaders run onto a stage before a cheering audience. They get in",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -18.347,
+        "B": -6.9653,
+        "C": -100.0,
+        "D": -18.4189
+      },
+      "latency_s": 0.428,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 19,
+      "ind": 247,
+      "ctx_preview": "They get into formation, then begin dancing and flipping as male cheerleaders jo",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -13.2064,
+        "B": -11.1057,
+        "C": -14.9985,
+        "D": -100.0
+      },
+      "latency_s": 0.53,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 20,
+      "ind": 282,
+      "ctx_preview": "A woman is reading a newspaper nearby while he speaks to her and shows her somet",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -15.93,
+        "B": -7.2705,
+        "C": -100.0,
+        "D": -17.8477
+      },
+      "latency_s": 0.53,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 21,
+      "ind": 354,
+      "ctx_preview": "A man is outside of a building. He is using commercial lawn mowing equipment. he",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -4.359,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -17.6349
+      },
+      "latency_s": 0.427,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 22,
+      "ind": 378,
+      "ctx_preview": "Children bring desert out for their family member. the family",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -18.4603,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -3.3096
+      },
+      "latency_s": 0.311,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 23,
+      "ind": 380,
+      "ctx_preview": "The family enjoys eating the desert together. The people in the restaurant laugh",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -13.1409,
+        "C": -15.2445,
+        "D": -7.4638
+      },
+      "latency_s": 0.514,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 24,
+      "ind": 385,
+      "ctx_preview": "A black female is shown in a room with a black scarf around her head. black spot",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -7.1375,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.53,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 25,
+      "ind": 386,
+      "ctx_preview": "A black female is shown in a room with a black scarf around her head. Black spot",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "logprobs": {
+        "A": -13.8778,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.639,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 26,
+      "ind": 393,
+      "ctx_preview": "A helicopter flies in some people who then start playing paintball. they",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -7.9614,
+        "B": -100.0,
+        "C": -16.7697,
+        "D": -100.0
+      },
+      "latency_s": 0.42,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 27,
+      "ind": 398,
+      "ctx_preview": "A young boy and girl are standing over a sink with their mother talking. the mot",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -17.6513,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -3.2229
+      },
+      "latency_s": 0.517,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 28,
+      "ind": 399,
+      "ctx_preview": "A young boy and girl are standing over a sink with their mother talking. The mot",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -13.5384,
+        "B": -9.525,
+        "C": -100.0,
+        "D": -17.7007
+      },
+      "latency_s": 0.417,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 29,
+      "ind": 400,
+      "ctx_preview": "The mother instructs them on how to brush their teeth while laughing. The boy he",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -17.2552,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -5.6918
+      },
+      "latency_s": 0.424,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 30,
+      "ind": 402,
+      "ctx_preview": "She gets them some water to gargle in their mouths. The boy and girl begin playi",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -16.5502,
+        "B": -2.5077,
+        "C": -100.0,
+        "D": -16.2798
+      },
+      "latency_s": 0.422,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 31,
+      "ind": 478,
+      "ctx_preview": "A cat is sitting in a cat bed. It is licking its paw. it",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -8.1834,
+        "B": -9.4949,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.423,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 32,
+      "ind": 479,
+      "ctx_preview": "A man in brown jacket is pulling out an arrow from the target board, then he was",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -17.4024,
+        "B": -17.9899,
+        "C": -100.0,
+        "D": -7.7874
+      },
+      "latency_s": 0.634,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 33,
+      "ind": 491,
+      "ctx_preview": "A man walks outside plugs his lawn mower in and gets ready to mow. he",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.8699,
+        "B": -100.0,
+        "C": -6.3425,
+        "D": -20.3562
+      },
+      "latency_s": 0.426,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 34,
+      "ind": 492,
+      "ctx_preview": "A man walks outside plugs his lawn mower in and gets ready to mow. He starts mow",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -12.8455,
+        "B": -8.0828,
+        "C": -100.0,
+        "D": -18.0732
+      },
+      "latency_s": 0.522,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 35,
+      "ind": 493,
+      "ctx_preview": "He starts mowing his lawn casually going over all the grass. His dog comes outsi",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -7.9196,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.512,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 36,
+      "ind": 503,
+      "ctx_preview": "A sea is shown with a green forest on seashore. Blond man is standing in seashor",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -16.0492,
+        "B": -100.0,
+        "C": -11.9774,
+        "D": -11.6635
+      },
+      "latency_s": 0.521,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 37,
+      "ind": 527,
+      "ctx_preview": "We see a bottle of face wash. we",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -100.0,
+        "C": -2.073,
+        "D": -100.0
+      },
+      "latency_s": 0.345,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 38,
+      "ind": 529,
+      "ctx_preview": "We see a person holding face wash then putting it on their face. They rinse the ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.5444,
+        "B": -100.0,
+        "C": -4.4706,
+        "D": -15.387
+      },
+      "latency_s": 0.417,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 39,
+      "ind": 560,
+      "ctx_preview": "A person is seen throwing plaster onto a wall while the camera follows the perso",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -19.1651,
+        "B": -7.9949,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.521,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 40,
+      "ind": 586,
+      "ctx_preview": "More and more people begin talking and each of them has a bottle of sun screen a",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.2355,
+        "B": -100.0,
+        "C": -7.9607,
+        "D": -100.0
+      },
+      "latency_s": 0.759,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 41,
+      "ind": 604,
+      "ctx_preview": "A group of boys are standing in a room with many clear cups of beer on a table t",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -100.0,
+        "C": -6.5749,
+        "D": -17.3101
+      },
+      "latency_s": 0.626,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 42,
+      "ind": 605,
+      "ctx_preview": "The boys talk, laugh and tease each other before beginning a game of beer pong a",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "logprobs": {
+        "A": -10.122,
+        "B": -19.9141,
+        "C": -100.0,
+        "D": -12.8299
+      },
+      "latency_s": 0.628,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 43,
+      "ind": 606,
+      "ctx_preview": "One of the ping pongs lands in the cup and one of the boys begins to drink the b",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -15.0502,
+        "C": -8.0082,
+        "D": -100.0
+      },
+      "latency_s": 0.519,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 44,
+      "ind": 615,
+      "ctx_preview": "There's a nbc news reporter wearing a red sweater and white shirt talking about ",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -11.9926,
+        "B": -11.2772,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.52,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 45,
+      "ind": 616,
+      "ctx_preview": "The representative from the company is talking about the services they offer and",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -6.3614,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -18.1801
+      },
+      "latency_s": 0.516,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 46,
+      "ind": 618,
+      "ctx_preview": "A woman tries to eat ice cream to a child, but the child refuses to eat the ice ",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "C",
+      "correct": false,
+      "logprobs": {
+        "A": -14.4424,
+        "B": -14.517,
+        "C": -13.0357,
+        "D": -14.2763
+      },
+      "latency_s": 0.64,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 47,
+      "ind": 619,
+      "ctx_preview": "After, the woman gives ice cream to the child, and then the woman cleans the chi",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -12.7773,
+        "B": -16.2242,
+        "C": -100.0,
+        "D": -13.7795
+      },
+      "latency_s": 0.531,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 48,
+      "ind": 689,
+      "ctx_preview": "Men are lifting heavy weights over their head several times. A man in a blue shi",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "C",
+      "correct": false,
+      "logprobs": {
+        "A": -15.5181,
+        "B": -100.0,
+        "C": -8.1281,
+        "D": -12.7471
+      },
+      "latency_s": 0.421,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 49,
+      "ind": 708,
+      "ctx_preview": "In home pet groomers demonstrate how to groom a pet. the person",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -16.7273,
+        "B": -19.2568,
+        "C": -8.0031,
+        "D": -100.0
+      },
+      "latency_s": 0.427,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 50,
+      "ind": 712,
+      "ctx_preview": "A person polish a shoe with a wrapped finger. then",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -16.2073,
+        "B": -100.0,
+        "C": -7.4427,
+        "D": -100.0
+      },
+      "latency_s": 0.414,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 51,
+      "ind": 748,
+      "ctx_preview": "Eight people are standing at the studio, one woman walked at the back of the gro",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -13.9105,
+        "B": -13.6711,
+        "C": -13.6749,
+        "D": -100.0
+      },
+      "latency_s": 0.728,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 52,
+      "ind": 801,
+      "ctx_preview": "A man is seen talking to the camera and presents his knife and sharpener. He the",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -17.2079,
+        "B": -17.0193,
+        "C": -5.9706,
+        "D": -100.0
+      },
+      "latency_s": 0.526,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 53,
+      "ind": 818,
+      "ctx_preview": "A man walks onto the stage to join a band. a man",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -10.9041,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -9.3137
+      },
+      "latency_s": 0.418,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 54,
+      "ind": 819,
+      "ctx_preview": "A man walks onto the stage to join a band. A man plays up front of a band with a",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -14.0562,
+        "B": -4.8247,
+        "C": -100.0,
+        "D": -15.5386
+      },
+      "latency_s": 0.417,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 55,
+      "ind": 854,
+      "ctx_preview": "A camera pans away from a road and shows a person's feet moving around. several ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -16.1983,
+        "B": -5.5164,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.422,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 56,
+      "ind": 855,
+      "ctx_preview": "A camera pans away from a road and shows a person's feet moving around. Several ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -15.2015,
+        "B": -100.0,
+        "C": -8.51,
+        "D": -15.6223
+      },
+      "latency_s": 0.416,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 57,
+      "ind": 858,
+      "ctx_preview": "A gymnast put power chalk power on his hands and stands near the pommel horse. t",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -17.3418,
+        "B": -7.8365,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.629,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 58,
+      "ind": 859,
+      "ctx_preview": "A gymnast put power chalk power on his hands and stands near the pommel horse. T",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -10.058,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -14.0762
+      },
+      "latency_s": 0.517,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 59,
+      "ind": 875,
+      "ctx_preview": "A logo shows that this video is presented by expert village. a man in a small bl",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -14.1787,
+        "B": -6.5449,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.508,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 60,
+      "ind": 876,
+      "ctx_preview": "A man in a small blue boat discusses the topic of hand surfing in a hole and giv",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -14.046,
+        "B": -10.416,
+        "C": -18.6709,
+        "D": -100.0
+      },
+      "latency_s": 0.515,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 61,
+      "ind": 883,
+      "ctx_preview": "The camera pans to show a man playing a harmonica while sitting on a log beside ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -16.8792,
+        "B": -3.2712,
+        "C": -100.0,
+        "D": -16.7433
+      },
+      "latency_s": 0.508,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 62,
+      "ind": 884,
+      "ctx_preview": "A woman walks near the train tracks while a train drives by. The woman sees the ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.8826,
+        "B": -100.0,
+        "C": -4.4318,
+        "D": -100.0
+      },
+      "latency_s": 0.415,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 63,
+      "ind": 886,
+      "ctx_preview": "The woman sees the harmonica playing man in the distance. She watches him and li",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -15.719,
+        "B": -4.5481,
+        "C": -100.0,
+        "D": -18.0948
+      },
+      "latency_s": 0.416,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 64,
+      "ind": 887,
+      "ctx_preview": "A person is shown looking around a city and begins washing windows with his tool",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "C",
+      "correct": false,
+      "logprobs": {
+        "A": -17.6745,
+        "B": -100.0,
+        "C": -7.409,
+        "D": -17.4473
+      },
+      "latency_s": 0.509,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 65,
+      "ind": 888,
+      "ctx_preview": "A person is shown looking around a city and begins washing windows with his tool",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -16.5914,
+        "B": -100.0,
+        "C": -9.1664,
+        "D": -100.0
+      },
+      "latency_s": 0.512,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 66,
+      "ind": 923,
+      "ctx_preview": "A man dressed in yellow and black winter clothes ice fishes on a a frozen lake. ",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -6.6969,
+        "B": -19.0466,
+        "C": -100.0,
+        "D": -19.1993
+      },
+      "latency_s": 0.416,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 67,
+      "ind": 924,
+      "ctx_preview": "A man dressed in yellow and black winter clothes ice fishes on a a frozen lake. ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -16.8959,
+        "B": -2.4061,
+        "C": -100.0,
+        "D": -19.1524
+      },
+      "latency_s": 0.416,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 68,
+      "ind": 942,
+      "ctx_preview": "Two children are seen sitting in a tub rubbing their faces and another person's ",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -15.4519,
+        "B": -15.6819,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.517,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 69,
+      "ind": 950,
+      "ctx_preview": "A woman hands a young boy a stick with a little girl grabbing for her attention.",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -5.5769,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -18.5939
+      },
+      "latency_s": 0.421,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 70,
+      "ind": 951,
+      "ctx_preview": "A woman hands a young boy a stick with a little girl grabbing for her attention.",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -17.4207,
+        "B": -100.0,
+        "C": -6.8963,
+        "D": -18.5594
+      },
+      "latency_s": 0.515,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 71,
+      "ind": 989,
+      "ctx_preview": "A woman is playing a violin on the street while various people walk around here ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "logprobs": {
+        "A": -10.0697,
+        "B": -17.6891,
+        "C": -11.21,
+        "D": -100.0
+      },
+      "latency_s": 0.51,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 72,
+      "ind": 992,
+      "ctx_preview": "Various pictures of food are shown followed by a person cutting up vegetables an",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "logprobs": {
+        "A": -10.2603,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.525,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 73,
+      "ind": 1005,
+      "ctx_preview": "Ingredients are sitting on a wooden block. a person",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -16.4757,
+        "B": -6.3322,
+        "C": -13.7693,
+        "D": -15.8668
+      },
+      "latency_s": 0.422,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 74,
+      "ind": 1012,
+      "ctx_preview": "A man is seen walking closer to a pinata while a large group of people stand aro",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -16.8966,
+        "B": -100.0,
+        "C": -18.2994,
+        "D": -8.7651
+      },
+      "latency_s": 0.52,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 75,
+      "ind": 1045,
+      "ctx_preview": "A pair of female hands uses an iron on a piece of baby clothing. the woman",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.9173,
+        "B": -100.0,
+        "C": -5.5362,
+        "D": -100.0
+      },
+      "latency_s": 0.427,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 76,
+      "ind": 1046,
+      "ctx_preview": "A pair of female hands uses an iron on a piece of baby clothing. The woman sets ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -16.9458,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -4.1199
+      },
+      "latency_s": 0.416,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 77,
+      "ind": 1047,
+      "ctx_preview": "The woman sets the iron aside and flips the clothing. The woman uses the iron on",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -20.1349,
+        "B": -19.6499,
+        "C": -8.2366,
+        "D": -18.8689
+      },
+      "latency_s": 0.422,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 78,
+      "ind": 1050,
+      "ctx_preview": "We see a chair with a pillow on it. a man holding a cat",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -19.3908,
+        "B": -100.0,
+        "C": -3.593,
+        "D": -19.2603
+      },
+      "latency_s": 0.304,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 79,
+      "ind": 1052,
+      "ctx_preview": "We see a chair with a pillow on it. A man holding a cat sits down on the chair. ",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -6.8762,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -17.2633
+      },
+      "latency_s": 0.416,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 80,
+      "ind": 1053,
+      "ctx_preview": "A man holding a cat sits down on the chair. The man clips the cats fingernails. ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -15.6753,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -5.3492
+      },
+      "latency_s": 0.416,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 81,
+      "ind": 1065,
+      "ctx_preview": "A young girl in a green leotard begins twirling a baton and doing tricks. the gi",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -16.2961,
+        "B": -7.7443,
+        "C": -100.0,
+        "D": -12.0814
+      },
+      "latency_s": 0.541,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 82,
+      "ind": 1066,
+      "ctx_preview": "The girl begins to incorporate her arms and does a flip and continues to flip th",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -8.3025,
+        "B": -17.1351,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.781,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 83,
+      "ind": 1067,
+      "ctx_preview": "As the young lady continues her performance, she twirls the baton between her le",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -13.8988,
+        "B": -3.5773,
+        "C": -100.0,
+        "D": -12.6681
+      },
+      "latency_s": 0.621,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 84,
+      "ind": 1084,
+      "ctx_preview": "We see a man in a driveway cleaning snow from his car. the man",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -12.9819,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -20.4801
+      },
+      "latency_s": 0.428,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 85,
+      "ind": 1085,
+      "ctx_preview": "We see a man in a driveway cleaning snow from his car. The man cleans the snow u",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -15.8855,
+        "B": -8.9731,
+        "C": -100.0,
+        "D": -9.5408
+      },
+      "latency_s": 0.426,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 86,
+      "ind": 1087,
+      "ctx_preview": "The man cleans the snow under his windshield wipers. We see the building behind ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "C",
+      "correct": false,
+      "logprobs": {
+        "A": -17.042,
+        "B": -100.0,
+        "C": -3.9666,
+        "D": -100.0
+      },
+      "latency_s": 0.496,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 87,
+      "ind": 1112,
+      "ctx_preview": "A man in a blue shirt and shorts lifts a large weight over his head. Another man",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -14.8974,
+        "B": -4.6545,
+        "C": -100.0,
+        "D": -15.8764
+      },
+      "latency_s": 0.433,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 88,
+      "ind": 1115,
+      "ctx_preview": "A man is seen throwing a dart onto a board and leads into a woman speaking. the ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.2187,
+        "B": -100.0,
+        "C": -6.1317,
+        "D": -19.3347
+      },
+      "latency_s": 0.546,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 89,
+      "ind": 1117,
+      "ctx_preview": "A group of people are standing in the middle of a forest with a trail of pebbles",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -17.7168,
+        "B": -100.0,
+        "C": -18.1593,
+        "D": -7.9187
+      },
+      "latency_s": 0.636,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 90,
+      "ind": 1119,
+      "ctx_preview": "The camera moves across the water and several people on boats and jet-skis are m",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -14.3619,
+        "B": -12.3895,
+        "C": -12.9233,
+        "D": -13.2084
+      },
+      "latency_s": 0.518,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 91,
+      "ind": 1140,
+      "ctx_preview": "A large patch of grass is shown. a man",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -17.2009,
+        "B": -4.3329,
+        "C": -100.0,
+        "D": -15.313
+      },
+      "latency_s": 0.423,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 92,
+      "ind": 1189,
+      "ctx_preview": "A pilates instructor on skates explains how to strap your risk protectors tight ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "logprobs": {
+        "A": -6.9366,
+        "B": -16.6533,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.843,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 93,
+      "ind": 1199,
+      "ctx_preview": "A woman wearing a tan apron is holding a knife and talking. She then shows an ap",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -10.3204,
+        "B": -14.814,
+        "C": -10.9344,
+        "D": -11.8299
+      },
+      "latency_s": 0.615,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 94,
+      "ind": 1200,
+      "ctx_preview": "She then shows an appliance on the table and tilts it upwards. She turns a dial ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -100.0,
+        "B": -100.0,
+        "C": -14.7923,
+        "D": -10.1107
+      },
+      "latency_s": 0.537,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 95,
+      "ind": 1201,
+      "ctx_preview": "She turns a dial on the appliance and sets it back down. She picks the knife bac",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.6005,
+        "B": -100.0,
+        "C": -10.3624,
+        "D": -19.0795
+      },
+      "latency_s": 0.416,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 96,
+      "ind": 1203,
+      "ctx_preview": "She picks the knife back up and places it in the appliance and slowly draws it b",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -6.0785,
+        "B": -19.7396,
+        "C": -100.0,
+        "D": -18.674
+      },
+      "latency_s": 0.513,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 97,
+      "ind": 1204,
+      "ctx_preview": "She picks the knife back up and places it in the appliance and slowly draws it b",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -16.6004,
+        "B": -5.053,
+        "C": -100.0,
+        "D": -15.0295
+      },
+      "latency_s": 0.51,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 98,
+      "ind": 1248,
+      "ctx_preview": "A man wearing a black clothes is sharpening the knife on a stone. The man beside",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -14.2288,
+        "B": -4.994,
+        "C": -100.0,
+        "D": -14.5402
+      },
+      "latency_s": 0.522,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 99,
+      "ind": 1277,
+      "ctx_preview": "A man is seen speaking to the camera while a shot of a person playing basketball",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -19.5257,
+        "B": -100.0,
+        "C": -20.1365,
+        "D": -5.8718
+      },
+      "latency_s": 0.422,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 100,
+      "ind": 1283,
+      "ctx_preview": "A bottle of deep cleansing gel is shown. a woman",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -11.7644,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -10.9244
+      },
+      "latency_s": 0.424,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 101,
+      "ind": 1301,
+      "ctx_preview": "The male athlete is standing by the two poles, raised his arms up, then jumped o",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -100.0,
+        "C": -10.0268,
+        "D": -100.0
+      },
+      "latency_s": 0.728,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 102,
+      "ind": 1321,
+      "ctx_preview": "A man is in the gym in tight he bends over picks up a weight over his head and d",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -16.4462,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -7.3919
+      },
+      "latency_s": 0.519,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 103,
+      "ind": 1322,
+      "ctx_preview": "A man is in the gym in tight he bends over picks up a weight over his head and d",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.3645,
+        "B": -100.0,
+        "C": -5.9466,
+        "D": -100.0
+      },
+      "latency_s": 0.544,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 104,
+      "ind": 1486,
+      "ctx_preview": "Two other men gets in the ring and are wresting the man in the center. People ar",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -18.7087,
+        "B": -4.9684,
+        "C": -19.7204,
+        "D": -19.796
+      },
+      "latency_s": 0.435,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 105,
+      "ind": 1493,
+      "ctx_preview": "A shot of a sunset set is shown followed by peaking smoking and walking around a",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -16.32,
+        "C": -6.0312,
+        "D": -100.0
+      },
+      "latency_s": 0.538,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 106,
+      "ind": 1494,
+      "ctx_preview": "A shot of a sunset set is shown followed by peaking smoking and walking around a",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -16.519,
+        "B": -100.0,
+        "C": -5.3816,
+        "D": -100.0
+      },
+      "latency_s": 0.52,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 107,
+      "ind": 1515,
+      "ctx_preview": "We see the underwater sea floor. two people",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -9.5658,
+        "B": -14.4861,
+        "C": -100.0,
+        "D": -15.3435
+      },
+      "latency_s": 0.418,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 108,
+      "ind": 1516,
+      "ctx_preview": "We see the underwater sea floor. Two people swim in front of the camera. we",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -15.5112,
+        "B": -8.8515,
+        "C": -14.5835,
+        "D": -13.9392
+      },
+      "latency_s": 0.417,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 109,
+      "ind": 1517,
+      "ctx_preview": "We see the underwater sea floor. Two people swim in front of the camera. We see ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "C",
+      "correct": false,
+      "logprobs": {
+        "A": -100.0,
+        "B": -9.1425,
+        "C": -8.4681,
+        "D": -12.7452
+      },
+      "latency_s": 0.413,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 110,
+      "ind": 1519,
+      "ctx_preview": "We see a fin enter the camera. The camera is spinning wildly. Bubbles rise out o",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -9.7726,
+        "C": -7.3566,
+        "D": -15.4618
+      },
+      "latency_s": 0.419,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 111,
+      "ind": 1549,
+      "ctx_preview": "A man is seen standing behind a counter speaking to the camera and holding up cl",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -7.1102,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.513,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 112,
+      "ind": 1607,
+      "ctx_preview": "A group of men on donkeys play a form of polo on a dirt field. the",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -12.9521,
+        "B": -8.5608,
+        "C": -100.0,
+        "D": -19.1634
+      },
+      "latency_s": 0.422,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 113,
+      "ind": 1608,
+      "ctx_preview": "A group of men on donkeys play a form of polo on a dirt field. The camera pans t",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -18.022,
+        "B": -100.0,
+        "C": -17.269,
+        "D": -1.9574
+      },
+      "latency_s": 0.423,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 114,
+      "ind": 1621,
+      "ctx_preview": "Two men are on a platform, fencing. they",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -7.0841,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -19.4775
+      },
+      "latency_s": 0.419,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 115,
+      "ind": 1622,
+      "ctx_preview": "Two men are on a platform, fencing. They jab at each other with their swords. a ",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -16.0304,
+        "B": -11.2968,
+        "C": -14.3546,
+        "D": -13.287
+      },
+      "latency_s": 0.329,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 116,
+      "ind": 1626,
+      "ctx_preview": "There are two men in the water wearing wetsuits and laying on their surfboards a",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -16.8655,
+        "B": -5.0474,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.518,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 117,
+      "ind": 1628,
+      "ctx_preview": "The surfer who is in front is happy to riding the wave for so long that he raise",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -15.9627,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -8.2081
+      },
+      "latency_s": 0.723,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 118,
+      "ind": 1663,
+      "ctx_preview": "Several people are seen drilling holes into the ice while looking down and speak",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.1463,
+        "B": -100.0,
+        "C": -4.6585,
+        "D": -100.0
+      },
+      "latency_s": 0.521,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 119,
+      "ind": 1701,
+      "ctx_preview": "An older women is shown sitting on a front step putting socks on with a small do",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -17.687,
+        "B": -100.0,
+        "C": -8.0525,
+        "D": -13.4747
+      },
+      "latency_s": 0.511,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 120,
+      "ind": 1708,
+      "ctx_preview": "A young man plays violin while wearing headsets. then",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -16.8408,
+        "B": -100.0,
+        "C": -7.5964,
+        "D": -17.4231
+      },
+      "latency_s": 0.423,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 121,
+      "ind": 1752,
+      "ctx_preview": "A female basketball coach is seen instructing a group of girl basketball players",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "C",
+      "correct": false,
+      "logprobs": {
+        "A": -18.6048,
+        "B": -100.0,
+        "C": -11.9902,
+        "D": -15.9381
+      },
+      "latency_s": 0.627,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 122,
+      "ind": 1755,
+      "ctx_preview": "A group of people are in a house. a man",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -12.4563,
+        "B": -9.8464,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.425,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 123,
+      "ind": 1756,
+      "ctx_preview": "A group of people are in a house. A man is mopping the floor with a mop. another",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -10.2329,
+        "B": -100.0,
+        "C": -15.3174,
+        "D": -13.3519
+      },
+      "latency_s": 0.418,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 124,
+      "ind": 1757,
+      "ctx_preview": "A man is mopping the floor with a mop. Another boy attempts to walk through wher",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -17.2916,
+        "B": -12.6634,
+        "C": -100.0,
+        "D": -6.0659
+      },
+      "latency_s": 0.442,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 125,
+      "ind": 1758,
+      "ctx_preview": "Another boy attempts to walk through where he is mopping. The man takes a drink ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -15.8772,
+        "B": -10.2539,
+        "C": -100.0,
+        "D": -8.1424
+      },
+      "latency_s": 0.421,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 126,
+      "ind": 1818,
+      "ctx_preview": "A small boy wearing a blue and yellow hoodie and gray sweat pants in standing in",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -17.8644,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -5.9263
+      },
+      "latency_s": 0.675,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 127,
+      "ind": 1819,
+      "ctx_preview": "A small boy wearing a blue and yellow hoodie and gray sweat pants in standing in",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -7.3307,
+        "B": -14.5447,
+        "C": -100.0,
+        "D": -9.2577
+      },
+      "latency_s": 0.609,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 128,
+      "ind": 1821,
+      "ctx_preview": "He starts with his first serve where the ball hits the net. Then he takes anothe",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -16.4384,
+        "B": -100.0,
+        "C": -8.49,
+        "D": -14.3381
+      },
+      "latency_s": 0.422,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 129,
+      "ind": 1827,
+      "ctx_preview": "We see a golden title on a black screen. a man",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -7.9143,
+        "C": -14.212,
+        "D": -14.3847
+      },
+      "latency_s": 0.448,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 130,
+      "ind": 1846,
+      "ctx_preview": "A shot of a cyclist is shown and then it cuts back to the same man in white spea",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "C",
+      "correct": false,
+      "logprobs": {
+        "A": -17.4483,
+        "B": -100.0,
+        "C": -5.3496,
+        "D": -100.0
+      },
+      "latency_s": 0.52,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 131,
+      "ind": 1855,
+      "ctx_preview": "A runner is running on a track in front of a crowd of people. a man",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -13.1049,
+        "B": -8.2762,
+        "C": -14.9315,
+        "D": -100.0
+      },
+      "latency_s": 0.418,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 132,
+      "ind": 1858,
+      "ctx_preview": "Runners are running down a track with crowds on both sides and one of the runner",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -12.6537,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -14.9452
+      },
+      "latency_s": 0.516,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 133,
+      "ind": 1860,
+      "ctx_preview": "The distressed runner is carried away. Runners in distress are shown. A man is t",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -16.6973,
+        "B": -7.2494,
+        "C": -100.0,
+        "D": -16.6264
+      },
+      "latency_s": 0.413,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 134,
+      "ind": 1872,
+      "ctx_preview": "A person is seen standing off in the distance with another standing around a hol",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -15.7745,
+        "B": -100.0,
+        "C": -6.7153,
+        "D": -100.0
+      },
+      "latency_s": 0.526,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 135,
+      "ind": 1874,
+      "ctx_preview": "A cooker talks in a kitchen and shows the inside of a sharpener knife that has d",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -16.7597,
+        "B": -5.1349,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.521,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 136,
+      "ind": 1875,
+      "ctx_preview": "A cooker talks in a kitchen and shows the inside of a sharpener knife that has d",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -16.1444,
+        "B": -100.0,
+        "C": -6.8692,
+        "D": -15.5398
+      },
+      "latency_s": 0.511,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 137,
+      "ind": 1876,
+      "ctx_preview": "A pile of trees are shown blowing outside on a cobblestone path outside of a bui",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -13.911,
+        "B": -9.1994,
+        "C": -100.0,
+        "D": -14.9501
+      },
+      "latency_s": 0.424,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 138,
+      "ind": 1931,
+      "ctx_preview": "A man does a barbecue in a yard while singing with people showing drinks in cans",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -9.6895,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -16.5668
+      },
+      "latency_s": 0.522,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 139,
+      "ind": 1932,
+      "ctx_preview": "Women serves drinks from a fountain. A man talks on front a microphone and peopl",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -11.8133,
+        "B": -17.3327,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.539,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 140,
+      "ind": 1962,
+      "ctx_preview": "There are people standing on a frozen body of water and are looking into a small",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -17.6381,
+        "B": -7.2469,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.74,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 141,
+      "ind": 1963,
+      "ctx_preview": "The standing man pulls the pole and wire up higher and the man kneeling on the i",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -17.8304,
+        "B": -18.4019,
+        "C": -100.0,
+        "D": -6.9324
+      },
+      "latency_s": 0.636,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 142,
+      "ind": 1998,
+      "ctx_preview": "Some boys are in the pools playing with volleyballs. there",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -13.5174,
+        "B": -100.0,
+        "C": -13.5066,
+        "D": -12.4316
+      },
+      "latency_s": 0.636,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 143,
+      "ind": 2030,
+      "ctx_preview": "A young man sits on a bed. the man",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "logprobs": {
+        "A": -9.2533,
+        "B": -9.3987,
+        "C": -100.0,
+        "D": -12.3239
+      },
+      "latency_s": 0.303,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 144,
+      "ind": 2047,
+      "ctx_preview": "Two men do maneuvers on a canoe pivoting the canoe helping with the paddlers. Th",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -17.2363,
+        "B": -100.0,
+        "C": -10.3248,
+        "D": -100.0
+      },
+      "latency_s": 0.645,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 145,
+      "ind": 2048,
+      "ctx_preview": "Then, the men pivot the canoe away from the bow paddlers while paddling fast the",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -14.9729,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -7.1691
+      },
+      "latency_s": 0.588,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 146,
+      "ind": 2059,
+      "ctx_preview": "People are standing on a hill of snow. people",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "C",
+      "correct": false,
+      "logprobs": {
+        "A": -100.0,
+        "B": -18.8379,
+        "C": -8.5618,
+        "D": -10.8956
+      },
+      "latency_s": 0.602,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 147,
+      "ind": 2060,
+      "ctx_preview": "People are standing on a hill of snow. People are snowboarding down a hill of sn",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -14.8887,
+        "B": -100.0,
+        "C": -11.0193,
+        "D": -17.9105
+      },
+      "latency_s": 0.572,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 148,
+      "ind": 2061,
+      "ctx_preview": "People are standing on a hill of snow. People are snowboarding down a hill of sn",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -12.9913,
+        "B": -11.8097,
+        "C": -100.0,
+        "D": -19.7593
+      },
+      "latency_s": 0.493,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 149,
+      "ind": 2154,
+      "ctx_preview": "A man in an outdoor basketball court explains how to do layup drills with both a",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -18.7605,
+        "B": -5.3021,
+        "C": -100.0,
+        "D": -19.8444
+      },
+      "latency_s": 0.727,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 150,
+      "ind": 2155,
+      "ctx_preview": "He then goes to the hash marks on the court and shows various variations of a la",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -19.7445,
+        "B": -5.4022,
+        "C": -100.0,
+        "D": -15.7545
+      },
+      "latency_s": 0.597,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 151,
+      "ind": 2165,
+      "ctx_preview": "The man in brown shirt is standing next to a pile of tennis ball while he is tal",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "C",
+      "correct": false,
+      "logprobs": {
+        "A": -16.0202,
+        "B": -16.9049,
+        "C": -7.1606,
+        "D": -15.6383
+      },
+      "latency_s": 0.511,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 152,
+      "ind": 2166,
+      "ctx_preview": "The man in brown shirt is standing next to a pile of tennis ball while he is tal",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -12.6086,
+        "B": -12.3588,
+        "C": -100.0,
+        "D": -9.5653
+      },
+      "latency_s": 0.511,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 153,
+      "ind": 2215,
+      "ctx_preview": "A group of people are sitting in a sauna fully clothed. One guy stands up with a",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -10.9251,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -7.2443
+      },
+      "latency_s": 0.415,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 154,
+      "ind": 2216,
+      "ctx_preview": "One guy stands up with a violin. The guy begins playing the violin and dancing. ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "logprobs": {
+        "A": -7.5304,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -13.5235
+      },
+      "latency_s": 0.5,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 155,
+      "ind": 2217,
+      "ctx_preview": "The harmonica is held up and shown. a person",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -5.2406,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.418,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 156,
+      "ind": 2218,
+      "ctx_preview": "The harmonica is held up and shown. A person holds a harmonica between his hands",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -18.0555,
+        "B": -3.505,
+        "C": -18.549,
+        "D": -18.2755
+      },
+      "latency_s": 0.414,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 157,
+      "ind": 2219,
+      "ctx_preview": "A young man plays the violin on a sidewalk for people passing by in downtown are",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -16.7441,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -5.6977
+      },
+      "latency_s": 0.42,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 158,
+      "ind": 2241,
+      "ctx_preview": "The camera zooms in to show the car's front right wheel. The camera zooms out to",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -17.6769,
+        "B": -100.0,
+        "C": -5.0642,
+        "D": -16.2108
+      },
+      "latency_s": 0.512,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 159,
+      "ind": 2242,
+      "ctx_preview": "The camera zooms in again to show the soap running down the back of the car, the",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "logprobs": {
+        "A": -14.291,
+        "B": -17.8742,
+        "C": -14.9434,
+        "D": -100.0
+      },
+      "latency_s": 0.515,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 160,
+      "ind": 2263,
+      "ctx_preview": "A woman in an orange shirt is sitting on an exercise machine. she",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -15.8307,
+        "B": -100.0,
+        "C": -4.6733,
+        "D": -16.8302
+      },
+      "latency_s": 0.442,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 161,
+      "ind": 2275,
+      "ctx_preview": "A person hangs onto the handles of a kite flying overhead. the kite",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -19.7123,
+        "B": -100.0,
+        "C": -7.8315,
+        "D": -100.0
+      },
+      "latency_s": 0.43,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 162,
+      "ind": 2278,
+      "ctx_preview": "People are rowing down a body of water. a guy",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -16.9028,
+        "B": -13.487,
+        "C": -100.0,
+        "D": -10.7853
+      },
+      "latency_s": 0.41,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 163,
+      "ind": 2281,
+      "ctx_preview": "A graphic introduces the hand car wash video. the car",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -15.7586,
+        "B": -4.0486,
+        "C": -100.0,
+        "D": -17.8636
+      },
+      "latency_s": 0.412,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 164,
+      "ind": 2282,
+      "ctx_preview": "A graphic introduces the hand car wash video. The car is washed first gently wit",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -17.523,
+        "B": -100.0,
+        "C": -4.8899,
+        "D": -16.9538
+      },
+      "latency_s": 0.311,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 165,
+      "ind": 2284,
+      "ctx_preview": "Next, the tires are soaped and washed thoroughly. After that, the car's engine i",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -8.5502,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.43,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 166,
+      "ind": 2301,
+      "ctx_preview": "A woman is seen putting makeup on her face and leads into several pictures of ma",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -13.7565,
+        "B": -10.3581,
+        "C": -100.0,
+        "D": -15.9476
+      },
+      "latency_s": 0.519,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 167,
+      "ind": 2306,
+      "ctx_preview": "There is a woman eating ice cream from a tub and talking to the camera man. and ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -17.2675,
+        "B": -5.9007,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.517,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 168,
+      "ind": 2307,
+      "ctx_preview": "There is a woman eating ice cream from a tub and talking to the camera man. And ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -17.9688,
+        "B": -100.0,
+        "C": -4.2955,
+        "D": -100.0
+      },
+      "latency_s": 0.423,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 169,
+      "ind": 2324,
+      "ctx_preview": "A man is shown standing in front of a blue background as many harmonicas are sho",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -100.0,
+        "B": -12.6801,
+        "C": -13.7488,
+        "D": -11.842
+      },
+      "latency_s": 0.628,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 170,
+      "ind": 2361,
+      "ctx_preview": "A violinist is playing the violin in a music room. she",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -6.1821,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -18.7656
+      },
+      "latency_s": 0.42,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 171,
+      "ind": 2363,
+      "ctx_preview": "A woman in a suit is talking to a camera. a woman",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -12.3776,
+        "B": -11.5173,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.424,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 172,
+      "ind": 2364,
+      "ctx_preview": "A woman in a suit is talking to a camera. A woman is putting contact lenses into",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -16.2564,
+        "B": -10.7419,
+        "C": -16.7421,
+        "D": -10.4492
+      },
+      "latency_s": 0.415,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 173,
+      "ind": 2390,
+      "ctx_preview": "A crowd watches as several runners in a race jog past. they all",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.7576,
+        "B": -19.9719,
+        "C": -7.0204,
+        "D": -100.0
+      },
+      "latency_s": 0.418,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 174,
+      "ind": 2433,
+      "ctx_preview": "A small child seated at a table eats ice cream with a spoon while people walk by",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -16.6969,
+        "B": -3.0628,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.419,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 175,
+      "ind": 2434,
+      "ctx_preview": "A small child seated at a table eats ice cream with a spoon while people walk by",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -13.8605,
+        "B": -15.6138,
+        "C": -100.0,
+        "D": -13.7042
+      },
+      "latency_s": 0.424,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 176,
+      "ind": 2477,
+      "ctx_preview": "There's a woman with red colored hair wearing a black tank top and printed black",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "C",
+      "correct": false,
+      "logprobs": {
+        "A": -15.2959,
+        "B": -100.0,
+        "C": -9.6512,
+        "D": -14.5753
+      },
+      "latency_s": 0.53,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 177,
+      "ind": 2478,
+      "ctx_preview": "There's a woman with red colored hair wearing a black tank top and printed black",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -12.3946,
+        "B": -16.7403,
+        "C": -100.0,
+        "D": -5.7418
+      },
+      "latency_s": 0.514,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 178,
+      "ind": 2487,
+      "ctx_preview": "The bikers are biking on the ramp, while on the starting line the group of biker",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -13.9982,
+        "B": -6.5413,
+        "C": -100.0,
+        "D": -16.0256
+      },
+      "latency_s": 0.518,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 179,
+      "ind": 2497,
+      "ctx_preview": "A man is kneeling on the ice with another beside hide pulling string out of a ho",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -100.0,
+        "C": -4.8064,
+        "D": -100.0
+      },
+      "latency_s": 0.522,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 180,
+      "ind": 2499,
+      "ctx_preview": "They continue to pull the string while the man beside him grabs a hook. He place",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -13.6557,
+        "C": -7.5133,
+        "D": -17.1748
+      },
+      "latency_s": 0.554,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 181,
+      "ind": 2513,
+      "ctx_preview": "A group of people wearing swim caps move around a pool and toss a ball around wi",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -6.0163,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.53,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 182,
+      "ind": 2514,
+      "ctx_preview": "A group of people wearing swim caps move around a pool and toss a ball around wi",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -4.9177,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.426,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 183,
+      "ind": 2518,
+      "ctx_preview": "We see an image and a title card. We see a man playing basketball. The shot he m",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -18.2051,
+        "B": -100.0,
+        "C": -16.5377,
+        "D": -3.8781
+      },
+      "latency_s": 0.427,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 184,
+      "ind": 2522,
+      "ctx_preview": "We see a title card on black. A man is shooting basketball in a gym. We see a ma",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -14.5907,
+        "B": -6.062,
+        "C": -100.0,
+        "D": -12.0222
+      },
+      "latency_s": 0.422,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 185,
+      "ind": 2533,
+      "ctx_preview": "A woman in a dress holding a violin addresses an audience. The woman plays the v",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -14.1257,
+        "C": -9.7134,
+        "D": -12.106
+      },
+      "latency_s": 0.413,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 186,
+      "ind": 2552,
+      "ctx_preview": "A boy skateboard on a road jumping and flipping the skateboard in the street. a ",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -17.082,
+        "B": -4.5588,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.429,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 187,
+      "ind": 2553,
+      "ctx_preview": "A boy skateboard on a road jumping and flipping the skateboard in the street. A ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -12.8565,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -8.3973
+      },
+      "latency_s": 0.413,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 188,
+      "ind": 2558,
+      "ctx_preview": "A girl is seen laying on a table with a man piercing her belly button below her.",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -100.0,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -8.1682
+      },
+      "latency_s": 0.516,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 189,
+      "ind": 2581,
+      "ctx_preview": "A young man is washing clothes inside a bathroom sink as he talks to the camera.",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -8.6796,
+        "B": -10.4758,
+        "C": -100.0,
+        "D": -15.8896
+      },
+      "latency_s": 0.52,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 190,
+      "ind": 2582,
+      "ctx_preview": "A young man is washing clothes inside a bathroom sink as he talks to the camera.",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -11.3669,
+        "B": -11.2336,
+        "C": -15.4726,
+        "D": -12.0174
+      },
+      "latency_s": 0.518,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 191,
+      "ind": 2583,
+      "ctx_preview": "Initially he starts to wash the clothes with both hands. Afterwards he adds more",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -14.4793,
+        "B": -8.6018,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.609,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 192,
+      "ind": 2611,
+      "ctx_preview": "A man touches his faces and waves. the man",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "D",
+      "correct": false,
+      "logprobs": {
+        "A": -14.071,
+        "B": -12.3529,
+        "C": -100.0,
+        "D": -12.0886
+      },
+      "latency_s": 0.415,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 193,
+      "ind": 2623,
+      "ctx_preview": "We see the title introducing us to jesse. jesse the dog",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -14.2371,
+        "B": -5.6358,
+        "C": -16.5834,
+        "D": -100.0
+      },
+      "latency_s": 0.556,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 194,
+      "ind": 2624,
+      "ctx_preview": "We see the title introducing us to jesse. Jesse the dog runs and catches frisbee",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "logprobs": {
+        "A": -18.9889,
+        "B": -16.7216,
+        "C": -9.9894,
+        "D": -100.0
+      },
+      "latency_s": 0.484,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 195,
+      "ind": 2625,
+      "ctx_preview": "We see the title introducing us to jesse. Jesse the dog runs and catches frisbee",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "logprobs": {
+        "A": -17.5938,
+        "B": -2.0184,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.422,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 196,
+      "ind": 2626,
+      "ctx_preview": "Jesse the dog runs and catches frisbee. We see jesse close up in the camera. Jes",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "logprobs": {
+        "A": -17.8694,
+        "B": -17.7561,
+        "C": -100.0,
+        "D": -3.4452
+      },
+      "latency_s": 0.426,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 197,
+      "ind": 2627,
+      "ctx_preview": "Jesse is running around catching the frisbee the lady throws. We see five still ",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "B",
+      "correct": false,
+      "logprobs": {
+        "A": -15.0359,
+        "B": -9.8364,
+        "C": -16.2028,
+        "D": -16.4075
+      },
+      "latency_s": 0.664,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 198,
+      "ind": 2637,
+      "ctx_preview": "A first person view is seen of a man riding a riding lawn mower. he",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -6.5845,
+        "B": -14.7195,
+        "C": -100.0,
+        "D": -100.0
+      },
+      "latency_s": 0.636,
+      "strategy": "logprob_baseline"
+    },
+    {
+      "idx": 199,
+      "ind": 2638,
+      "ctx_preview": "A first person view is seen of a man riding a riding lawn mower. He takes turns ",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "logprobs": {
+        "A": -6.2151,
+        "B": -100.0,
+        "C": -100.0,
+        "D": -19.6293
+      },
+      "latency_s": 0.427,
+      "strategy": "logprob_baseline"
+    }
+  ]
+}

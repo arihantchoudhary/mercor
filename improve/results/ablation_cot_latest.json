@@ -1,0 +1,273 @@
+{
+  "tag": "ablation_cot",
+  "timestamp": "20260321T022405Z",
+  "config": {
+    "model": "qwen2.5:7b",
+    "base_url": "http://localhost:11434",
+    "seed": 42,
+    "n_examples": 20,
+    "template_name": "direct",
+    "n_shot": 3,
+    "cot_style": "step_by_step",
+    "sc_k": 5,
+    "sc_temp": 0.7,
+    "strategy": "cot"
+  },
+  "metrics": {
+    "accuracy": 0.2,
+    "correct": 4,
+    "total": 20,
+    "ci_95_wilson": [
+      0.08066,
+      0.41602
+    ],
+    "ci_95_bootstrap": [
+      0.05,
+      0.4
+    ],
+    "avg_latency_s": 14.34,
+    "total_time_s": 286.8
+  },
+  "per_example": [
+    {
+      "idx": 0,
+      "ind": 24,
+      "ctx_preview": "A man is sitting on a roof. he",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the most plausible continuation of the text \"A man is sitting on a roof. he\", let's analyze each option:\n\n1. **Option A: is using wrap to wrap a pair of skis.**\n   - This scenario seems u",
+      "latency_s": 13.411,
+      "strategy": "cot"
+    },
+    {
+      "idx": 1,
+      "ind": 92,
+      "ctx_preview": "A lady walks to a barbell. She bends down and grabs the pole. the lady",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the described actions:\n\n1. **Context Analysis:**\n   - A lady walks to a barbell.\n   - She bends down and",
+      "latency_s": 13.919,
+      "strategy": "cot"
+    },
+    {
+      "idx": 2,
+      "ind": 106,
+      "ctx_preview": "Two women in a child are shown in a canoe while a man pulls the canoe while stan",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option:\n\n1. **Option A: \"are then shown paddling down a river in a boat while a woman talks.\"**\n   - This option introduces ne",
+      "latency_s": 13.591,
+      "strategy": "cot"
+    },
+    {
+      "idx": 3,
+      "ind": 114,
+      "ctx_preview": "A boy is running down a track. the boy",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the scenario described: \"A boy is running down a track.\"\n\n1. **Option A: runs into a car.**\n   - This sc",
+      "latency_s": 12.997,
+      "strategy": "cot"
+    },
+    {
+      "idx": 4,
+      "ind": 116,
+      "ctx_preview": "The boy lifts his body above the height of a pole. The boy lands on his back on ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given text, let's analyze each option in context:\n\n1. **Context Analysis:**\n   - The boy has lifted his body above a pole.\n   - He then lands on his back onto a",
+      "latency_s": 14.245,
+      "strategy": "cot"
+    },
+    {
+      "idx": 5,
+      "ind": 117,
+      "ctx_preview": "The boy lands on his back on to a red mat. The boy gets up from the mat. the boy",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the most plausible ending for the given context, let's analyze each option in relation to the provided information:\n\n1. **Context Analysis:**\n   - The boy lands on his back onto a red mat",
+      "latency_s": 13.608,
+      "strategy": "cot"
+    },
+    {
+      "idx": 6,
+      "ind": 149,
+      "ctx_preview": "A man is standing in front of a camera. He starts playing a harmonica for the ca",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option:\n\n1. **Option A: \"begins to play the harmonica with his body while looking at the camera.\"**\n   - This option suggests ",
+      "latency_s": 14.229,
+      "strategy": "cot"
+    },
+    {
+      "idx": 7,
+      "ind": 170,
+      "ctx_preview": "A cartoon animation video is shown with people wandering around and rockets bein",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option:\n\n1. **Option A: \"fight robots of evil and ends with a to be continued.\"**\n   - This suggests that the video involves a",
+      "latency_s": 16.045,
+      "strategy": "cot"
+    },
+    {
+      "idx": 8,
+      "ind": 180,
+      "ctx_preview": "A man is holding a pocket knife while sitting on some rocks in the wilderness. t",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the initial scenario:\n\n1. **Context Analysis:**\n   - A man is holding a pocket knife.\n   - He is sitting",
+      "latency_s": 14.206,
+      "strategy": "cot"
+    },
+    {
+      "idx": 9,
+      "ind": 182,
+      "ctx_preview": "Then he takes a small stone from the flowing river and smashes it on another sto",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the described actions:\n\n1. **Context Analysis:**\n   - The person takes a small stone from a flowing rive",
+      "latency_s": 15.085,
+      "strategy": "cot"
+    },
+    {
+      "idx": 10,
+      "ind": 185,
+      "ctx_preview": "Then he takes a piece of bark and rubs the powered stone pieces onto it. The sto",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the described process of rubbing stone particles onto a piece of bark:\n\n1. **Option A: uses a small brus",
+      "latency_s": 14.92,
+      "strategy": "cot"
+    },
+    {
+      "idx": 11,
+      "ind": 186,
+      "ctx_preview": "The stone particles stick to the wet piece of wood. He then takes the knife and ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let\u2019s analyze each option in relation to the provided information:\n\n1. **Context Analysis:**\n   - The stone particles stick to a wet piece of woo",
+      "latency_s": 13.985,
+      "strategy": "cot"
+    },
+    {
+      "idx": 12,
+      "ind": 187,
+      "ctx_preview": "He then takes the knife and sharpens it against the wood piece. He then notices ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the provided scenario:\n\n1. **Context Analysis:**\n   - A man is sharpening a knife against a wood piece.\n",
+      "latency_s": 13.745,
+      "strategy": "cot"
+    },
+    {
+      "idx": 13,
+      "ind": 188,
+      "ctx_preview": "He then notices a little black and green poisonous frog sitting next to him. The",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the situation described:\n\n1. **Context Analysis:**\n   - A little black and green poisonous frog has esca",
+      "latency_s": 14.356,
+      "strategy": "cot"
+    },
+    {
+      "idx": 14,
+      "ind": 192,
+      "ctx_preview": "A person is playing bagpipes out in a park. A man and two boys watching from a f",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the provided scenario:\n\n1. **Option A: \"shoots areas all around the park while the bagpipes play.\"**\n   ",
+      "latency_s": 15.681,
+      "strategy": "cot"
+    },
+    {
+      "idx": 15,
+      "ind": 200,
+      "ctx_preview": "Two people are seen passing a ball back and fourth in a pool and leads into one ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the initial scenario:\n\n1. **Option A: \"dips the ball and walks back with the boy and pours detergent int",
+      "latency_s": 15.0,
+      "strategy": "cot"
+    },
+    {
+      "idx": 16,
+      "ind": 225,
+      "ctx_preview": "A woman is sitting at a table in a fast food restaurant while eating. She contin",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the initial scenario:\n\n1. **Option A: \"is then seen sitting alone as she eats a cold brown ice cream.\"**",
+      "latency_s": 14.342,
+      "strategy": "cot"
+    },
+    {
+      "idx": 17,
+      "ind": 245,
+      "ctx_preview": "A group of cheerleaders run onto a stage before a cheering audience. they",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the initial scenario:\n\n1. **Option A: get into formation, then begin dancing and flipping as male cheerl",
+      "latency_s": 13.556,
+      "strategy": "cot"
+    },
+    {
+      "idx": 18,
+      "ind": 246,
+      "ctx_preview": "A group of cheerleaders run onto a stage before a cheering audience. They get in",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option:\n\n1. **Option A: \"dance and flip on stage while hanging their hats on the sides.\"**\n   - This option introduces an unus",
+      "latency_s": 15.108,
+      "strategy": "cot"
+    },
+    {
+      "idx": 19,
+      "ind": 247,
+      "ctx_preview": "They get into formation, then begin dancing and flipping as male cheerleaders jo",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "To determine the correct ending for the given context, let's analyze each option in relation to the described scene:\n\n1. **Option A: \"are done, they shake hands and walk away, but cheers are heard all",
+      "latency_s": 14.765,
+      "strategy": "cot"
+    }
+  ]
+}

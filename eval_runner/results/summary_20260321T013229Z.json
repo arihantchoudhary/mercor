@@ -1,0 +1,27 @@
+{
+  "model": "qwen2.5:7b",
+  "tasks": [
+    "custom"
+  ],
+  "summary": [
+    {
+      "task": "prog_lang_id",
+      "metric": "exact_match,none",
+      "value": 1.0,
+      "num_samples": {
+        "original": 18,
+        "effective": 18
+      }
+    },
+    {
+      "task": "prog_lang_id",
+      "metric": "exact_match_stderr,none",
+      "value": 0.0,
+      "num_samples": {
+        "original": 18,
+        "effective": 18
+      }
+    }
+  ],
+  "timestamp": "2026-03-21T01:32:29.864025+00:00"
+}

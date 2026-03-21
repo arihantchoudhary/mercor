@@ -1,0 +1,129 @@
+{
+  "model": "qwen2.5:7b",
+  "trials": 5,
+  "timestamp": "2026-03-20T19:49:27",
+  "determinism": {
+    "total_prompts": 5,
+    "deterministic_count": 5,
+    "details": [
+      {
+        "prompt_idx": 1,
+        "prompt": "What is the capital of Japan? Answer with just the city name.",
+        "passed": true,
+        "unique_outputs": 1,
+        "outputs": [
+          "Tokyo",
+          "Tokyo",
+          "Tokyo",
+          "Tokyo",
+          "Tokyo"
+        ]
+      },
+      {
+        "prompt_idx": 2,
+        "prompt": "What is 7 * 8? Answer with just the number.",
+        "passed": true,
+        "unique_outputs": 1,
+        "outputs": [
+          "56",
+          "56",
+          "56",
+          "56",
+          "56"
+        ]
+      },
+      {
+        "prompt_idx": 3,
+        "prompt": "Name one primary color. Answer with a single word.",
+        "passed": true,
+        "unique_outputs": 1,
+        "outputs": [
+          "Red",
+          "Red",
+          "Red",
+          "Red",
+          "Red"
+        ]
+      },
+      {
+        "prompt_idx": 4,
+        "prompt": "What programming language is Flask written in? Answer with one word.",
+        "passed": true,
+        "unique_outputs": 1,
+        "outputs": [
+          "Python",
+          "Python",
+          "Python",
+          "Python",
+          "Python"
+        ]
+      },
+      {
+        "prompt_idx": 5,
+        "prompt": "Is the earth round or flat? Answer with one word.",
+        "passed": true,
+        "unique_outputs": 1,
+        "outputs": [
+          "Round",
+          "Round",
+          "Round",
+          "Round",
+          "Round"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "total_items": 5,
+    "regex_passed": 5,
+    "schema_passed": 5,
+    "correct": 5,
+    "details": [
+      {
+        "code_snippet": "fmt.Println(\"Hello, World!\")",
+        "expected": "Go",
+        "raw_output": "Go",
+        "cleaned": "Go",
+        "regex_pass": true,
+        "schema_pass": true,
+        "correct": true
+      },
+      {
+        "code_snippet": "console.log('Hello, World!');",
+        "expected": "JavaScript",
+        "raw_output": "JavaScript",
+        "cleaned": "JavaScript",
+        "regex_pass": true,
+        "schema_pass": true,
+        "correct": true
+      },
+      {
+        "code_snippet": "print(\"Hello, World!\")",
+        "expected": "Python",
+        "raw_output": "Python",
+        "cleaned": "Python",
+        "regex_pass": true,
+        "schema_pass": true,
+        "correct": true
+      },
+      {
+        "code_snippet": "System.out.println(\"Hello, World!\");",
+        "expected": "Java",
+        "raw_output": "Java",
+        "cleaned": "Java",
+        "regex_pass": true,
+        "schema_pass": true,
+        "correct": true
+      },
+      {
+        "code_snippet": "puts \"Hello, World!\"",
+        "expected": "Ruby",
+        "raw_output": "Ruby",
+        "cleaned": "Ruby",
+        "regex_pass": true,
+        "schema_pass": true,
+        "correct": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "tag": "baseline",
+  "timestamp": "20260321T014437Z",
+  "config": {
+    "model": "qwen2.5:7b",
+    "base_url": "http://localhost:11434",
+    "seed": 42,
+    "n_examples": 20,
+    "template_name": "direct",
+    "n_shot": 3,
+    "cot_style": "step_by_step",
+    "sc_k": 5,
+    "sc_temp": 0.7,
+    "strategy": "baseline"
+  },
+  "metrics": {
+    "accuracy": 0.5,
+    "correct": 10,
+    "total": 20,
+    "ci_95_wilson": [
+      0.29929,
+      0.70071
+    ],
+    "ci_95_bootstrap": [
+      0.3,
+      0.7
+    ],
+    "avg_latency_s": 38.242,
+    "total_time_s": 764.8
+  },
+  "per_example": [
+    {
+      "idx": 0,
+      "ind": 24,
+      "ctx_preview": "A man is sitting on a roof. he",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "D. starts pulling up roofing on a roof.",
+      "latency_s": 39.447,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 1,
+      "ind": 92,
+      "ctx_preview": "A lady walks to a barbell. She bends down and grabs the pole. the lady",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "raw_response": "D. stands and lifts the weight over her head.",
+      "latency_s": 17.797,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 2,
+      "ind": 106,
+      "ctx_preview": "Two women in a child are shown in a canoe while a man pulls the canoe while stan",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "A",
+      "latency_s": 18.073,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 3,
+      "ind": 114,
+      "ctx_preview": "A boy is running down a track. the boy",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "D",
+      "correct": false,
+      "raw_response": "To determine the most plausible continuation, let's analyze each option:",
+      "latency_s": 7.02,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 4,
+      "ind": 116,
+      "ctx_preview": "The boy lifts his body above the height of a pole. The boy lands on his back on ",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "raw_response": "B. gets up from the mat.",
+      "latency_s": 7.934,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 5,
+      "ind": 117,
+      "ctx_preview": "The boy lands on his back on to a red mat. The boy gets up from the mat. the boy",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "raw_response": "B.",
+      "latency_s": 6.579,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 6,
+      "ind": 149,
+      "ctx_preview": "A man is standing in front of a camera. He starts playing a harmonica for the ca",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "B",
+      "correct": false,
+      "raw_response": "B",
+      "latency_s": 6.457,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 7,
+      "ind": 170,
+      "ctx_preview": "A cartoon animation video is shown with people wandering around and rockets bein",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "D",
+      "correct": false,
+      "raw_response": "To determine the most plausible continuation, let's analyze each option:",
+      "latency_s": 7.518,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 8,
+      "ind": 180,
+      "ctx_preview": "A man is holding a pocket knife while sitting on some rocks in the wilderness. t",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "The most plausible continuation is:",
+      "latency_s": 6.782,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 9,
+      "ind": 182,
+      "ctx_preview": "Then he takes a small stone from the flowing river and smashes it on another sto",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "raw_response": "B",
+      "latency_s": 27.003,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 10,
+      "ind": 185,
+      "ctx_preview": "Then he takes a piece of bark and rubs the powered stone pieces onto it. The sto",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "B",
+      "correct": false,
+      "raw_response": "B",
+      "latency_s": 28.82,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 11,
+      "ind": 186,
+      "ctx_preview": "The stone particles stick to the wet piece of wood. He then takes the knife and ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "A",
+      "latency_s": 97.155,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 12,
+      "ind": 187,
+      "ctx_preview": "He then takes the knife and sharpens it against the wood piece. He then notices ",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "raw_response": "C",
+      "latency_s": 94.588,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 13,
+      "ind": 188,
+      "ctx_preview": "He then notices a little black and green poisonous frog sitting next to him. The",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "C",
+      "correct": true,
+      "raw_response": "C",
+      "latency_s": 54.932,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 14,
+      "ind": 192,
+      "ctx_preview": "A person is playing bagpipes out in a park. A man and two boys watching from a f",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "raw_response": "A",
+      "latency_s": 46.423,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 15,
+      "ind": 200,
+      "ctx_preview": "Two people are seen passing a ball back and fourth in a pool and leads into one ",
+      "gold": "D",
+      "gold_idx": 3,
+      "predicted": "D",
+      "correct": true,
+      "raw_response": "D. demonstrates how to properly throw the ball with his hands while still speaking to",
+      "latency_s": 96.032,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 16,
+      "ind": 225,
+      "ctx_preview": "A woman is sitting at a table in a fast food restaurant while eating. She contin",
+      "gold": "C",
+      "gold_idx": 2,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "The most plausible continuation is:",
+      "latency_s": 123.724,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 17,
+      "ind": 245,
+      "ctx_preview": "A group of cheerleaders run onto a stage before a cheering audience. they",
+      "gold": "A",
+      "gold_idx": 0,
+      "predicted": "A",
+      "correct": true,
+      "raw_response": "A",
+      "latency_s": 35.249,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 18,
+      "ind": 246,
+      "ctx_preview": "A group of cheerleaders run onto a stage before a cheering audience. They get in",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "B",
+      "correct": true,
+      "raw_response": "B",
+      "latency_s": 37.573,
+      "strategy": "baseline"
+    },
+    {
+      "idx": 19,
+      "ind": 247,
+      "ctx_preview": "They get into formation, then begin dancing and flipping as male cheerleaders jo",
+      "gold": "B",
+      "gold_idx": 1,
+      "predicted": "A",
+      "correct": false,
+      "raw_response": "A",
+      "latency_s": 5.738,
+      "strategy": "baseline"
+    }
+  ]
+}

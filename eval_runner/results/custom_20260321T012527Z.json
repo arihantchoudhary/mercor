@@ -1,0 +1,757 @@
+{
+  "results": {
+    "prog_lang_id": {
+      "alias": "prog_lang_id",
+      "exact_match,none": 1.0,
+      "exact_match_stderr,none": 0.0
+    }
+  },
+  "group_subtasks": {
+    "prog_lang_id": []
+  },
+  "configs": {
+    "prog_lang_id": {
+      "task": "prog_lang_id",
+      "dataset_path": "json",
+      "dataset_kwargs": {
+        "data_files": {
+          "test": "eval_runner/custom_benchmark.json"
+        },
+        "field": "examples"
+      },
+      "test_split": "test",
+      "doc_to_text": "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\n{{snippet}}\n```\n\nLanguage:\n",
+      "doc_to_target": "{{language}}",
+      "unsafe_code": false,
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": null,
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\n{{snippet}}\n```\n\nLanguage:\n",
+        "doc_to_choice": null,
+        "doc_to_target": "{{language}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "until": [
+          "\n"
+        ],
+        "max_gen_toks": 20,
+        "temperature": 0.0
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {}
+    }
+  },
+  "versions": {
+    "prog_lang_id": "Yaml"
+  },
+  "n-shot": {
+    "prog_lang_id": 0
+  },
+  "higher_is_better": {
+    "prog_lang_id": {
+      "exact_match": true
+    }
+  },
+  "n-samples": {
+    "prog_lang_id": {
+      "original": 18,
+      "effective": 18
+    }
+  },
+  "samples": {
+    "prog_lang_id": [
+      {
+        "doc_id": 0,
+        "doc": {
+          "snippet": "fn main() {\n    let x: i32 = 42;\n    println!(\"Value: {}\", x);\n}",
+          "language": "Rust"
+        },
+        "target": "Rust",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\nfn main() {\n    let x: i32 = 42;\n    println!(\"Value: {}\", x);\n}\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Rust"
+          ]
+        ],
+        "filtered_resps": [
+          "Rust"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "9f195c82e66c20aef44b1ba18c9bde1781c187f55d8a3fe15d971ad67390c41c",
+        "prompt_hash": "90999e564ade4696301aede359de00ace9083ebc8ab96f7f7ece599f42399db6",
+        "target_hash": "d9aa89fdd15ad5c41d9c128feffe9e07dc828b83f85296f7f42bda506821300e",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 1,
+        "doc": {
+          "snippet": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)",
+          "language": "Python"
+        },
+        "target": "Python",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Python"
+          ]
+        ],
+        "filtered_resps": [
+          "Python"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "87270a84622bcc49265d652e821df68bb8a78f81ebccdc331095dbd130589797",
+        "prompt_hash": "70d9eb859e16c384d4afa7b50c29b8f4e4a4b3ec12eb52b71f6adce53fbbc2da",
+        "target_hash": "18885f27b5af9012df19e496460f9294d5ab76128824c6f993787004f6d9a7db",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 2,
+        "doc": {
+          "snippet": "public class Hello {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+          "language": "Java"
+        },
+        "target": "Java",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\npublic class Hello {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Java"
+          ]
+        ],
+        "filtered_resps": [
+          "Java"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "5c12b92c68fffcbdb838fe26b7f057326a36d45c710297501c0b9d0c7fc0cd19",
+        "prompt_hash": "ee8e890f6e36bc3a6ffd55d52b1b6c067911039b91ead1efbd4198b150fa3a5b",
+        "target_hash": "c1ba60ce13586503a21a05e9ef0bb959f1ba74a1d37bcfcbf5fc6bfb548f684d",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 3,
+        "doc": {
+          "snippet": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}",
+          "language": "Go"
+        },
+        "target": "Go",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Go"
+          ]
+        ],
+        "filtered_resps": [
+          "Go"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "a981f8cf31a8332d2506fca21ab2744848d32bddc19ebaea6515af59fc1f252a",
+        "prompt_hash": "04d62b09815df0c1fbb1fb5296e117bbc7d2f58f6c4bc942e71fcd281968d139",
+        "target_hash": "6cc8519b91584e8bd435d63341e0838a99721948718b1c9c1e9c358c64ba992a",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 4,
+        "doc": {
+          "snippet": "const express = require('express');\nconst app = express();\napp.get('/', (req, res) => res.send('Hello'));\napp.listen(3000);",
+          "language": "JavaScript"
+        },
+        "target": "JavaScript",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\nconst express = require('express');\nconst app = express();\napp.get('/', (req, res) => res.send('Hello'));\napp.listen(3000);\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "JavaScript"
+          ]
+        ],
+        "filtered_resps": [
+          "JavaScript"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "34f156355e51015cdc1a68d4f2f42183164d0e4a6d0b1ccaa85808f786b23909",
+        "prompt_hash": "4b650846e5a29b924411d6294d2990e257d7e5c3cb518c9c3eddfdca2e552328",
+        "target_hash": "b27ad06d123c6145fba7e9217a4cfbf2488b4743810ed8c8ff14ad01a5bbe515",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 5,
+        "doc": {
+          "snippet": "#include <stdio.h>\n\nint main() {\n    int arr[] = {3, 1, 4, 1, 5};\n    int n = sizeof(arr) / sizeof(arr[0]);\n    printf(\"%d\\n\", n);\n    return 0;\n}",
+          "language": "C"
+        },
+        "target": "C",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\n#include <stdio.h>\n\nint main() {\n    int arr[] = {3, 1, 4, 1, 5};\n    int n = sizeof(arr) / sizeof(arr[0]);\n    printf(\"%d\\n\", n);\n    return 0;\n}\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "C"
+          ]
+        ],
+        "filtered_resps": [
+          "C"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "e081d89054755d7c1e458e9371bf314eb5bf3d7a91ae3dcfb711b41850edccc7",
+        "prompt_hash": "421219693b606ca1cf3ee4e828a3cee2ee603240a50fbf93c1ad51dcbaeb1cb3",
+        "target_hash": "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 6,
+        "doc": {
+          "snippet": "#include <iostream>\n#include <vector>\n\nint main() {\n    std::vector<int> v = {1, 2, 3};\n    for (auto& x : v) std::cout << x << std::endl;\n}",
+          "language": "C++"
+        },
+        "target": "C++",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\n#include <iostream>\n#include <vector>\n\nint main() {\n    std::vector<int> v = {1, 2, 3};\n    for (auto& x : v) std::cout << x << std::endl;\n}\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "C++"
+          ]
+        ],
+        "filtered_resps": [
+          "C++"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "c20e729a0d57c605cb6367cb74012900356b1e12177788f18097b48db9c6523e",
+        "prompt_hash": "93910e2cca780c8d8b6635bcfe8134361dd25ec58965db45231ed40706d7e318",
+        "target_hash": "f1deb75fa21d3c47a6e7a45967b79fad2d053947066dc95322c5bcee1e9fe21c",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 7,
+        "doc": {
+          "snippet": "interface Greetable {\n    name: string;\n    greet(): string;\n}\n\nconst person: Greetable = {\n    name: \"Alice\",\n    greet() { return `Hello, ${this.name}`; }\n};",
+          "language": "TypeScript"
+        },
+        "target": "TypeScript",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\ninterface Greetable {\n    name: string;\n    greet(): string;\n}\n\nconst person: Greetable = {\n    name: \"Alice\",\n    greet() { return `Hello, ${this.name}`; }\n};\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "TypeScript"
+          ]
+        ],
+        "filtered_resps": [
+          "TypeScript"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "74c967e0137dae9cc3d761bc0cfa4b5f6ac04d0ae9370746632ef85e57b344f7",
+        "prompt_hash": "a1cdbc72565c25c25cc488f0d32265a376bbaf25d6ce3fb32df789ec8c9cb9dd",
+        "target_hash": "ed0504f70a48ffe9ed17e7ddee02a72a9c8af602aee1f7ce11853975ce911733",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 8,
+        "doc": {
+          "snippet": "def quicksort(list)\n  return list if list.length <= 1\n  pivot = list.sample\n  left, right = list.partition { |x| x < pivot }\n  quicksort(left) + [pivot] + quicksort(right)\nend",
+          "language": "Ruby"
+        },
+        "target": "Ruby",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\ndef quicksort(list)\n  return list if list.length <= 1\n  pivot = list.sample\n  left, right = list.partition { |x| x < pivot }\n  quicksort(left) + [pivot] + quicksort(right)\nend\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Ruby"
+          ]
+        ],
+        "filtered_resps": [
+          "Ruby"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "2241f19ad49ce52554185669626f9b4bd015ef782a16b158cdb43461e08fd4ed",
+        "prompt_hash": "6fddff90a19d87c1d557982bee2cd9722851c8a331d98ec26c500b218cd4767a",
+        "target_hash": "108040ac289a13952927ac14f658a0b06cf24612c43375801b63f87be11191f7",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 9,
+        "doc": {
+          "snippet": "import Swift\n\nfunc greet(_ name: String) -> String {\n    return \"Hello, \\(name)!\"\n}\nprint(greet(\"World\"))",
+          "language": "Swift"
+        },
+        "target": "Swift",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\nimport Swift\n\nfunc greet(_ name: String) -> String {\n    return \"Hello, \\(name)!\"\n}\nprint(greet(\"World\"))\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Swift"
+          ]
+        ],
+        "filtered_resps": [
+          "Swift"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "f8e000abfbdf4b3d05faa494c0ae96557d314e39b359566db42a99793e121d34",
+        "prompt_hash": "fbb6e5a495368d91224248a061ffb226ee8acbdf83bf4ba80ce7505a54dd7068",
+        "target_hash": "ae8ed2743925477eafad0dfdb0d0832702634da4dc6ec1aefa4f3a61953e93f0",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 10,
+        "doc": {
+          "snippet": "fun main() {\n    val numbers = listOf(1, 2, 3, 4, 5)\n    println(numbers.filter { it % 2 == 0 })\n}",
+          "language": "Kotlin"
+        },
+        "target": "Kotlin",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\nfun main() {\n    val numbers = listOf(1, 2, 3, 4, 5)\n    println(numbers.filter { it % 2 == 0 })\n}\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Kotlin"
+          ]
+        ],
+        "filtered_resps": [
+          "Kotlin"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "11ce945d4f533178068741b2741a36af2908da3b6ca5585bd749d12f9c77d80f",
+        "prompt_hash": "cd23a43dcd351b31a5d9b3200b6c714c21d14820efac0ba8c68016ffc422e30f",
+        "target_hash": "c78f6c97923e81a2f04f09c5e87b69e085c1e47066a1136b5f590bfde696e2eb",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 11,
+        "doc": {
+          "snippet": "<?php\n$fruits = array(\"apple\", \"banana\", \"cherry\");\nforeach ($fruits as $fruit) {\n    echo $fruit . \"\\n\";\n}\n?>",
+          "language": "PHP"
+        },
+        "target": "PHP",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\n<?php\n$fruits = array(\"apple\", \"banana\", \"cherry\");\nforeach ($fruits as $fruit) {\n    echo $fruit . \"\\n\";\n}\n?>\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "PHP"
+          ]
+        ],
+        "filtered_resps": [
+          "PHP"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "75a153aa3d3bb3202ad5463942e6e2bf94ce55d74ff771625b0dfaa09cc4b1cf",
+        "prompt_hash": "40600764ae51c30a5f2f0f8b1dbc17da0cae6effdc804074d1cc41d876daacdb",
+        "target_hash": "0a6a15345ad0c7e36ed9dc3ec9c8ce843af4bc765d1019eb6d563e0836b962f3",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 12,
+        "doc": {
+          "snippet": "SELECT e.name, d.department_name\nFROM employees e\nJOIN departments d ON e.dept_id = d.id\nWHERE e.salary > 50000\nORDER BY e.name;",
+          "language": "SQL"
+        },
+        "target": "SQL",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\nSELECT e.name, d.department_name\nFROM employees e\nJOIN departments d ON e.dept_id = d.id\nWHERE e.salary > 50000\nORDER BY e.name;\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "SQL"
+          ]
+        ],
+        "filtered_resps": [
+          "SQL"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "7eb669ebc8b18397923718cba34acb01087ed7dc94d62b450bac82c8177c5cf8",
+        "prompt_hash": "0af8e9847dd13f11749054357d5b05176eb80ba5a7364a49d739600691eb0978",
+        "target_hash": "a7056a455639d1c7deec82ee787db24a0c1878e2792b4597709f0facf7cc7b35",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 13,
+        "doc": {
+          "snippet": "defmodule Math do\n  def factorial(0), do: 1\n  def factorial(n) when n > 0 do\n    n * factorial(n - 1)\n  end\nend",
+          "language": "Elixir"
+        },
+        "target": "Elixir",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\ndefmodule Math do\n  def factorial(0), do: 1\n  def factorial(n) when n > 0 do\n    n * factorial(n - 1)\n  end\nend\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Elixir"
+          ]
+        ],
+        "filtered_resps": [
+          "Elixir"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "a7f15e12ca5c0e19e4044361757c11cb8d94b002bae4c9d72843393402c2ea71",
+        "prompt_hash": "d901ec62c454011aa5768f0c26d26390b1dc81ce9f6a314368fead7eaa222856",
+        "target_hash": "3315715a7a3ad57428298676c5ae465dada38d951bdfac9348a8a31e9c7401cb",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 14,
+        "doc": {
+          "snippet": "import scala.collection.mutable.ArrayBuffer\n\nobject Main extends App {\n  val buf = ArrayBuffer(1, 2, 3)\n  buf.foreach(println)\n}",
+          "language": "Scala"
+        },
+        "target": "Scala",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\nimport scala.collection.mutable.ArrayBuffer\n\nobject Main extends App {\n  val buf = ArrayBuffer(1, 2, 3)\n  buf.foreach(println)\n}\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Scala"
+          ]
+        ],
+        "filtered_resps": [
+          "Scala"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "5f37705e65013833805db188e5033f5d94b621992ceddc7e33d76e44ee52fa82",
+        "prompt_hash": "b95307f015bfbda26fd6d3aa5da23fed93935b760d3acb7722a795008f77df15",
+        "target_hash": "8fcd1836eba80875018ae5bb1f5e0754ccd28ff157379ca1a29db8f6d4450726",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 15,
+        "doc": {
+          "snippet": "main :: IO ()\nmain = do\n    let xs = [1..10]\n    print (filter even xs)",
+          "language": "Haskell"
+        },
+        "target": "Haskell",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\nmain :: IO ()\nmain = do\n    let xs = [1..10]\n    print (filter even xs)\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Haskell"
+          ]
+        ],
+        "filtered_resps": [
+          "Haskell"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "ee5be85320cff885d96ca84ce2487e7e06a1770679e28a39d9b5a73e5acbfc3b",
+        "prompt_hash": "fabce37b2b5776ac662d66ebbbf5766c914b2e209466230ccffa7a442bdf6749",
+        "target_hash": "540d2c45c091f2dfaa439dd63eff4c546699386ae3ac7e01c968e1825b615c63",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 16,
+        "doc": {
+          "snippet": "#!/bin/bash\nfor f in *.txt; do\n    wc -l \"$f\"\ndone | sort -n",
+          "language": "Bash"
+        },
+        "target": "Bash",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\n#!/bin/bash\nfor f in *.txt; do\n    wc -l \"$f\"\ndone | sort -n\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "Bash"
+          ]
+        ],
+        "filtered_resps": [
+          "Bash"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "5acefeeb130150a5639ecdbcc7e4c5f071ca51c666f6a7f663d1b56d0ebe3a6e",
+        "prompt_hash": "4b714929e7d3dcb64d82012a43eccda0964a17bfbb67dcb8596e90cb585f8b62",
+        "target_hash": "d1e9567da9a8a4b0c43da0791da1d2594cf5d7b78547fea132d06bccc1b06091",
+        "exact_match": 1.0
+      },
+      {
+        "doc_id": 17,
+        "doc": {
+          "snippet": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] {1, 2, 3, 4};\n        Console.WriteLine(nums.Sum());\n    }\n}",
+          "language": "C#"
+        },
+        "target": "C#",
+        "arguments": [
+          [
+            "Identify the programming language of the following code snippet. Reply with only the language name, nothing else.\n\nCode:\n```\nusing System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] {1, 2, 3, 4};\n        Console.WriteLine(nums.Sum());\n    }\n}\n```\n\nLanguage:\n",
+            {
+              "until": [
+                "\n"
+              ],
+              "max_gen_toks": 20,
+              "temperature": 0.0
+            }
+          ]
+        ],
+        "resps": [
+          [
+            "C#"
+          ]
+        ],
+        "filtered_resps": [
+          "C#"
+        ],
+        "filter": "none",
+        "metrics": [
+          "exact_match"
+        ],
+        "doc_hash": "e96b53d86f0f21b5bcaceca6a7c6537b01cc3a366086e019be5c3ed0755b1377",
+        "prompt_hash": "8e517ef424f9f5fe0b0f513c1518fea820909d1053939f903dd722894a17d908",
+        "target_hash": "040228846ead4a4195145fe089343cb0894d00a9380176a41a8f6c5ee70b4824",
+        "exact_match": 1.0
+      }
+    ]
+  },
+  "config": {
+    "model": "OllamaLM",
+    "model_args": null,
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "011c9f6",
+  "date": 1774056224.393555,
+  "pretty_env_info": "PyTorch version: 2.10.0\nIs debug build: False\nCUDA used to build PyTorch: None\nROCM used to build PyTorch: N/A\n\nOS: macOS 15.7 (arm64)\nGCC version: Could not collect\nClang version: 17.0.0 (clang-1700.6.3.2)\nCMake version: Could not collect\nLibc version: N/A\n\nPython version: 3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:21:08) [Clang 20.1.8 ] (64-bit runtime)\nPython platform: macOS-15.7-arm64-arm-64bit-Mach-O\nIs CUDA available: False\nCUDA runtime version: No CUDA\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: No CUDA\nNvidia driver version: No CUDA\ncuDNN version: No CUDA\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nApple M3 Pro\n\nVersions of relevant libraries:\n[pip3] numpy==2.4.2\n[pip3] torch==2.10.0\n[conda] numpy                                2.4.2            pypi_0              pypi\n[conda] torch                                2.10.0           pypi_0              pypi",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.11",
+  "upper_git_hash": "011c9f68eeaf3d4e612cb17676fdb8f30f49994b",
+  "elapsed_seconds": 107.01016974449158,
+  "model_name": "qwen2.5:7b"
+}

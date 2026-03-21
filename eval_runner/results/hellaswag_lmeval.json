@@ -1,0 +1,105 @@
+{
+  "results": {
+    "hellaswag": {
+      "alias": "hellaswag",
+      "acc,none": 0.26,
+      "acc_stderr,none": 0.06266203485560373,
+      "acc_norm,none": 0.38,
+      "acc_norm_stderr,none": 0.06934092056863769
+    }
+  },
+  "group_subtasks": {
+    "hellaswag": []
+  },
+  "configs": {
+    "hellaswag": {
+      "task": "hellaswag",
+      "tag": [
+        "multiple_choice"
+      ],
+      "dataset_path": "Rowan/hellaswag",
+      "training_split": "train",
+      "validation_split": "validation",
+      "process_docs": "def process_docs(dataset: datasets.Dataset) -> datasets.Dataset:\n    def _process_doc(doc):\n        ctx = doc[\"ctx_a\"] + \" \" + doc[\"ctx_b\"].capitalize()\n        out_doc = {\n            \"query\": preprocess(doc[\"activity_label\"] + \": \" + ctx),\n            \"choices\": [preprocess(ending) for ending in doc[\"endings\"]],\n            \"gold\": int(doc[\"label\"]),\n        }\n        return out_doc\n\n    return dataset.map(_process_doc)\n",
+      "doc_to_text": "{{query}}",
+      "doc_to_target": "{{label}}",
+      "unsafe_code": false,
+      "doc_to_choice": "choices",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "fewshot_config": {
+        "sampler": "default",
+        "split": null,
+        "process_docs": "<function process_docs at 0x112c77d80>",
+        "fewshot_indices": null,
+        "samples": null,
+        "doc_to_text": "{{query}}",
+        "doc_to_choice": "choices",
+        "doc_to_target": "{{label}}",
+        "gen_prefix": null,
+        "fewshot_delimiter": "\n\n",
+        "target_delimiter": " "
+      },
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "acc",
+          "aggregation": "mean",
+          "higher_is_better": true
+        },
+        {
+          "metric": "acc_norm",
+          "aggregation": "mean",
+          "higher_is_better": true
+        }
+      ],
+      "output_type": "multiple_choice",
+      "repeats": 1,
+      "should_decontaminate": false,
+      "metadata": {
+        "version": 1.0
+      }
+    }
+  },
+  "versions": {
+    "hellaswag": 1.0
+  },
+  "n-shot": {
+    "hellaswag": 0
+  },
+  "higher_is_better": {
+    "hellaswag": {
+      "acc": true,
+      "acc_norm": true
+    }
+  },
+  "n-samples": {
+    "hellaswag": {
+      "original": 10042,
+      "effective": 50
+    }
+  },
+  "config": {
+    "model": "OllamaLM",
+    "model_args": null,
+    "batch_size": 1,
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": 50,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": null,
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "608ee96",
+  "date": 1774063995.9235241,
+  "pretty_env_info": "PyTorch version: 2.10.0\nIs debug build: False\nCUDA used to build PyTorch: None\nROCM used to build PyTorch: N/A\n\nOS: macOS 15.7 (arm64)\nGCC version: Could not collect\nClang version: 17.0.0 (clang-1700.6.3.2)\nCMake version: Could not collect\nLibc version: N/A\n\nPython version: 3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:21:08) [Clang 20.1.8 ] (64-bit runtime)\nPython platform: macOS-15.7-arm64-arm-64bit-Mach-O\nIs CUDA available: False\nCUDA runtime version: No CUDA\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: No CUDA\nNvidia driver version: No CUDA\ncuDNN version: No CUDA\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nApple M3 Pro\n\nVersions of relevant libraries:\n[pip3] numpy==2.4.2\n[pip3] torch==2.10.0\n[conda] numpy                                2.4.2            pypi_0              pypi\n[conda] torch                                2.10.0           pypi_0              pypi",
+  "transformers_version": "N/A",
+  "lm_eval_version": "0.4.11",
+  "upper_git_hash": "608ee96434e9caf857ba6a33ad66dd75e5fa7ed5",
+  "elapsed_seconds": 312.9852068424225
+}

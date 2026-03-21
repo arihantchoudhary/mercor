@@ -1,0 +1,78 @@
+{
+  "version": "1.0",
+  "description": "Programming language identification -- given a short code snippet, identify the language.",
+  "examples": [
+    {
+      "snippet": "fn main() {\n    let x: i32 = 42;\n    println!(\"Value: {}\", x);\n}",
+      "language": "Rust"
+    },
+    {
+      "snippet": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)",
+      "language": "Python"
+    },
+    {
+      "snippet": "public class Hello {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+      "language": "Java"
+    },
+    {
+      "snippet": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}",
+      "language": "Go"
+    },
+    {
+      "snippet": "const express = require('express');\nconst app = express();\napp.get('/', (req, res) => res.send('Hello'));\napp.listen(3000);",
+      "language": "JavaScript"
+    },
+    {
+      "snippet": "#include <stdio.h>\n\nint main() {\n    int arr[] = {3, 1, 4, 1, 5};\n    int n = sizeof(arr) / sizeof(arr[0]);\n    printf(\"%d\\n\", n);\n    return 0;\n}",
+      "language": "C"
+    },
+    {
+      "snippet": "#include <iostream>\n#include <vector>\n\nint main() {\n    std::vector<int> v = {1, 2, 3};\n    for (auto& x : v) std::cout << x << std::endl;\n}",
+      "language": "C++"
+    },
+    {
+      "snippet": "interface Greetable {\n    name: string;\n    greet(): string;\n}\n\nconst person: Greetable = {\n    name: \"Alice\",\n    greet() { return `Hello, ${this.name}`; }\n};",
+      "language": "TypeScript"
+    },
+    {
+      "snippet": "def quicksort(list)\n  return list if list.length <= 1\n  pivot = list.sample\n  left, right = list.partition { |x| x < pivot }\n  quicksort(left) + [pivot] + quicksort(right)\nend",
+      "language": "Ruby"
+    },
+    {
+      "snippet": "import Swift\n\nfunc greet(_ name: String) -> String {\n    return \"Hello, \\(name)!\"\n}\nprint(greet(\"World\"))",
+      "language": "Swift"
+    },
+    {
+      "snippet": "fun main() {\n    val numbers = listOf(1, 2, 3, 4, 5)\n    println(numbers.filter { it % 2 == 0 })\n}",
+      "language": "Kotlin"
+    },
+    {
+      "snippet": "<?php\n$fruits = array(\"apple\", \"banana\", \"cherry\");\nforeach ($fruits as $fruit) {\n    echo $fruit . \"\\n\";\n}\n?>",
+      "language": "PHP"
+    },
+    {
+      "snippet": "SELECT e.name, d.department_name\nFROM employees e\nJOIN departments d ON e.dept_id = d.id\nWHERE e.salary > 50000\nORDER BY e.name;",
+      "language": "SQL"
+    },
+    {
+      "snippet": "defmodule Math do\n  def factorial(0), do: 1\n  def factorial(n) when n > 0 do\n    n * factorial(n - 1)\n  end\nend",
+      "language": "Elixir"
+    },
+    {
+      "snippet": "import scala.collection.mutable.ArrayBuffer\n\nobject Main extends App {\n  val buf = ArrayBuffer(1, 2, 3)\n  buf.foreach(println)\n}",
+      "language": "Scala"
+    },
+    {
+      "snippet": "main :: IO ()\nmain = do\n    let xs = [1..10]\n    print (filter even xs)",
+      "language": "Haskell"
+    },
+    {
+      "snippet": "#!/bin/bash\nfor f in *.txt; do\n    wc -l \"$f\"\ndone | sort -n",
+      "language": "Bash"
+    },
+    {
+      "snippet": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] {1, 2, 3, 4};\n        Console.WriteLine(nums.Sum());\n    }\n}",
+      "language": "C#"
+    }
+  ]
+}
