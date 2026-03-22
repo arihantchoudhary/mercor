@@ -239,7 +239,7 @@ Brown et al. (2024) find that the optimal test-time strategy varies by compute b
 
 ---
 
-## 6. Calls to Action
+## 6. Calls to Action (for the community)
 
 1. **Benchmark authors should specify extraction methodology.** Published accuracy numbers are only meaningful if the extraction pipeline is specified. Molfese et al. (2025) demonstrate that different extraction methods produce accuracy differences of 10+ pp on the same model. A 10-point accuracy difference can come entirely from how you parse the model's output, not from model capability.
 
@@ -255,7 +255,22 @@ Brown et al. (2024) find that the optimal test-time strategy varies by compute b
 
 ---
 
-## 7. Conclusions and Future Work
+## 7. Scope and Limitations: When CoT Genuinely Helps
+
+Our results should not be read as a general indictment of chain-of-thought prompting. The claim is narrower: **for multiple-choice ranking tasks like HellaSwag, CoT adds extraction noise without adding reasoning signal**, because the model's belief about which continuation is most plausible is already captured in its single-token output distribution P(A|prompt).
+
+This does *not* generalize to tasks requiring multi-step compositional reasoning. Consider a complex algebraic problem: if you first prompt the model to enumerate the properties of the relevant structure (e.g., "list the properties of a nilpotent Lie algebra"), those properties are serialized into the context window and become explicit conditioning for subsequent generation. The model no longer needs to implicitly recall these properties through its weights — it reads them back from its own output. Each intermediate step narrows the distribution for the next, functioning as an external scratchpad that compensates for the transformer's bounded per-pass computation depth.
+
+This scratchpad effect is well-established (Wei et al., 2022) and is the genuine mechanism behind CoT's success on arithmetic, symbolic reasoning, and multi-hop QA. The key distinction is between:
+
+- **Recognition/ranking tasks** (HellaSwag, most MCQ benchmarks): The model compares pre-stated options. No intermediate computation needs to be serialized. The output distribution already encodes the ranking. CoT is overhead.
+- **Generation/reasoning tasks** (math, logic, planning): The answer depends on intermediate results that exceed what the model can compute in a single forward pass. CoT is essential — it externalizes working memory into the context window, and forced single-token scoring would be catastrophic.
+
+Our forced single-token approach is a measurement technique for the first category. It should not be applied to the second. The broader lesson is that evaluation methodology must be matched to task structure: constrained decoding for recognition, free generation for reasoning.
+
+---
+
+## 8. Conclusions and Future Work
 
 We demonstrated that answer extraction methodology is the dominant variable in multiple-choice LLM evaluation, contributing more accuracy variance than any prompt engineering technique we tested. Forced single-token scoring provides a simple, zero-cost fix that eliminates extraction failures and enables standard prompt optimizations to work as intended. Choice shuffling, while theoretically motivated, does not help for models without strong position bias.
 
